@@ -18,9 +18,9 @@ export default function VerdictCard({ ticker, companyName, marketBenchmark, verd
       <p className="verdict-explanation">{verdict.explanation}</p>
       <div className="verdict-stats">
         <Stat
-          label="News Reaction Ratio"
+          label="News Beta"
           value={verdict.news_reaction_ratio ?? "—"}
-          hint="Idiosyncratic move size on news days vs quiet days, after removing the market's effect (vs SPY)"
+          hint="Idiosyncratic move size on news days vs quiet days, after removing the market's effect (vs SPY). See: What is News Beta?"
         />
         <Stat label="News days" value={verdict.n_news_days} />
         <Stat label="Quiet days" value={verdict.n_quiet_days} />

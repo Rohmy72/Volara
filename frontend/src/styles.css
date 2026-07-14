@@ -1015,6 +1015,175 @@ body::after {
   }
 }
 
+/* --- Inline links ----------------------------------------------------------- */
+.inline-link {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 45%, transparent);
+  transition: color 0.15s, border-color 0.15s;
+}
+.inline-link:hover {
+  color: var(--accent-2);
+  border-color: var(--accent-2);
+}
+
+/* --- Methodology page (What is News Beta?) --------------------------------- */
+.doc-page {
+  max-width: 780px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  animation: rise 0.5s ease both;
+}
+
+.doc-back {
+  align-self: flex-start;
+  font-size: 0.85rem;
+}
+
+.doc-title {
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0;
+  background: var(--grad-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 4px 26px var(--glow-accent));
+}
+
+.doc-lede {
+  font-size: 1.08rem;
+  line-height: 1.65;
+  margin: 0;
+  color: var(--fg);
+}
+
+.doc-formula-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 1.5rem 1.25rem;
+  border-radius: var(--radius);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.frac {
+  display: inline-flex;
+  flex-direction: column;
+  text-align: center;
+  vertical-align: middle;
+}
+.frac > span:first-child {
+  padding: 0 0.6rem 0.3rem;
+  border-bottom: 2px solid var(--accent);
+}
+.frac > span:last-child {
+  padding: 0.3rem 0.6rem 0;
+}
+
+.doc-section h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 0.7rem;
+  font-size: 1.12rem;
+}
+
+.doc-step {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--grad-accent);
+  box-shadow: 0 4px 14px var(--glow-accent);
+  flex: none;
+}
+
+.doc-section p {
+  line-height: 1.65;
+  margin: 0.6rem 0;
+}
+
+.doc-formula {
+  font-size: 0.98rem;
+  padding: 0.9rem 1.1rem;
+  border-radius: var(--radius-sm);
+  background: var(--glass-hi);
+  border: 1px solid var(--glass-border);
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.92rem;
+  margin: 0.5rem 0 1rem;
+}
+.doc-table th,
+.doc-table td {
+  text-align: left;
+  padding: 0.6rem 0.7rem;
+  border-bottom: 1px solid var(--glass-border);
+  vertical-align: top;
+  line-height: 1.5;
+}
+.doc-table th {
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.doc-pill {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 0.22rem 0.65rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.pill-high {
+  color: var(--high);
+  background: color-mix(in srgb, var(--high) 15%, transparent);
+  border: 1px solid color-mix(in srgb, var(--high) 45%, transparent);
+}
+.pill-mid {
+  color: var(--mid);
+  background: color-mix(in srgb, var(--mid) 15%, transparent);
+  border: 1px solid color-mix(in srgb, var(--mid) 45%, transparent);
+}
+.pill-low {
+  color: var(--low);
+  background: color-mix(in srgb, var(--low) 15%, transparent);
+  border: 1px solid color-mix(in srgb, var(--low) 45%, transparent);
+}
+
+.doc-list {
+  margin: 0.4rem 0 0.2rem;
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  line-height: 1.6;
+}
+
 /* --- Accessibility: respect reduced motion -------------------------------- */
 @media (prefers-reduced-motion: reduce) {
   html::before,
@@ -1023,7 +1192,8 @@ body::after {
   .live-dot {
     animation: none;
   }
-  .results {
+  .results,
+  .doc-page {
     animation: none;
   }
   * {

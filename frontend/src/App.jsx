@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TopNav from "./components/TopNav.jsx";
 import TickerForm from "./components/TickerForm.jsx";
 import VerdictCard from "./components/VerdictCard.jsx";
@@ -6,9 +6,25 @@ import PriceChart from "./components/PriceChart.jsx";
 import BuzzwordList from "./components/BuzzwordList.jsx";
 import NewsList from "./components/NewsList.jsx";
 import Leaderboards from "./components/Leaderboards.jsx";
+import NewsBetaPage from "./components/NewsBetaPage.jsx";
 import { analyzeTicker } from "./api.js";
 
+// Tiny hash router — one extra page doesn't warrant a routing library.
+function useHashRoute() {
+  const [route, setRoute] = useState(window.location.hash);
+  useEffect(() => {
+    const onChange = () => {
+      setRoute(window.location.hash);
+      window.scrollTo(0, 0);
+    };
+    window.addEventListener("hashchange", onChange);
+    return () => window.removeEventListener("hashchange", onChange);
+  }, []);
+  return route;
+}
+
 export default function App() {
+  const route = useHashRoute();
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -25,6 +41,15 @@ export default function App() {
     } finally {
       setLoading(false);
     }
+  }
+
+  if (route.startsWith("#/news-beta")) {
+    return (
+      <div className="app">
+        <TopNav />
+        <NewsBetaPage />
+      </div>
+    );
   }
 
   return (

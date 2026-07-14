@@ -18,8 +18,11 @@ export default function StockLeaderboard({ stocks, sectors, onSelectTicker }) {
     <div className="panel lb-panel">
       <h3>News-driven leaderboard</h3>
       <p className="muted lb-sub">
-        Ranked by News Reaction Ratio — how much bigger a stock's idiosyncratic
-        moves are on news days vs quiet days.
+        Ranked by News Beta — how much bigger a stock's idiosyncratic
+        moves are on news days vs quiet days.{" "}
+        <a className="inline-link" href="#/news-beta">
+          What is News Beta?
+        </a>
       </p>
 
       <div className="chip-row">

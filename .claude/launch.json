@@ -9,7 +9,7 @@
         "uvicorn",
         "app.main:app",
         "--app-dir",
-        "/Users/rohm/Desktop/untitled folder/backend",
+        "/Users/rohm/Desktop/Volara/backend",
         "--port",
         "8000",
         "--reload"
@@ -20,8 +20,8 @@
       "name": "frontend",
       "runtimeExecutable": "/Users/rohm/.nvm/versions/node/v24.18.0/bin/node",
       "runtimeArgs": [
-        "/Users/rohm/Desktop/untitled folder/frontend/node_modules/vite/bin/vite.js",
-        "/Users/rohm/Desktop/untitled folder/frontend"
+        "/Users/rohm/Desktop/Volara/frontend/node_modules/vite/bin/vite.js",
+        "/Users/rohm/Desktop/Volara/frontend"
       ],
       "port": 5173
     }
