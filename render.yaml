@@ -1,0 +1,24 @@
+# Render Blueprint — deploys the Volara API as a web service.
+# In Render: New → Blueprint → pick this repo. Docs: https://render.com/docs/blueprint-spec
+#
+# After the FIRST Vercel deploy, set CORS_ORIGINS below (or in the Render
+# dashboard) to your real frontend origin, e.g. https://volara.vercel.app
+
+services:
+  - type: web
+    name: volara-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: |
+      pip install -r requirements.txt
+      python3 scripts/build_leaderboard.py
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.1
+      - key: CORS_ORIGINS
+        value: http://localhost:5173 # ← replace with your Vercel URL after first deploy
+      # - key: AV_KEY            # optional Alpha Vantage key — set in dashboard, never here
+      #   sync: false
