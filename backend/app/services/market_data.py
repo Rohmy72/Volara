@@ -5,7 +5,7 @@ import pandas as pd
 import yfinance as yf
 
 from app import cache
-from app.data.universe import meta_by_ticker, tickers
+from app.data.universe import meta_by_ticker
 from app.core.config import settings
 from app.services.yahoo_session import session
 
