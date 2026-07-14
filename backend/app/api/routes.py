@@ -98,7 +98,7 @@ def analyze(
         abnormal = result.abnormal_returns.get(date)
         price_series.append(
             PricePoint(
-                date=date.strftime("%Y-%m-%d"),
+                date=date.strftime("%Y-%m-%d"), # type: ignore
                 close=round(float(row["ticker"]), 4),
                 daily_return=round(float(daily_ret), 6) if pd.notna(daily_ret) else None,
                 abnormal_return=round(float(abnormal), 6) if pd.notna(abnormal) else None,

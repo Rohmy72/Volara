@@ -33,4 +33,4 @@ def load_snapshot() -> dict:
             _cache = json.load(f)
         _cache_mtime = mtime
 
-    return _cache
+    return _cache # type: ignore
