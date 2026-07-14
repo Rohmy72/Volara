@@ -3,11 +3,14 @@ from __future__ import annotations
 
 import pandas as pd
 import yfinance as yf
-import requests
+# Import requests from curl_cffi instead of standard requests
+from curl_cffi import requests  # type: ignore
 
 from app.data.universe import tickers
 from app.core.config import settings
 
+# Create a session that perfectly impersonates Google Chrome
+session = requests.Session(impersonate="chrome")
 # 1. Create the session with the browser User-Agent header
 session = requests.Session()
 session.headers.update({
