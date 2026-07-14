@@ -22,23 +22,26 @@
   --glass-border: rgba(233, 176, 148, 0.16);
   --glass-hi: rgba(255, 241, 229, 0.06);
 
-  /* Accents — terracotta/salmon primary, FT teal secondary, claret for down */
+  /* Accents — one warm brand family (terracotta → salmon). Teal exists only
+     as the data/calm tone; gold is the in-between tier. No cross-temperature
+     gradients anywhere. */
   --accent: #e8734a;
   --accent-2: #f4a07d;
-  --accent-3: #38a3a3;
+  --accent-3: #f4a07d;
   --amber: #e8734a; /* "news/hot" tone (kept name for existing rules) */
-  --grad-accent: linear-gradient(120deg, #38a3a3 0%, #e8734a 100%);
+  --grad-accent: linear-gradient(120deg, #d95f38 0%, #f4a07d 100%);
   --glow-accent: rgba(232, 115, 74, 0.42);
   --glow-amber: rgba(232, 115, 74, 0.36);
 
-  /* Chart — teal data line, terracotta = news events */
-  --chart-line: #38a3a3;
+  /* Chart — sage data line, terracotta = news events */
+  --chart-line: #92ad63;
   --chart-news-dot: #e8734a;
 
-  /* Verdict / leaderboard severity: terracotta = hot/news-driven, teal = calm */
+  /* Severity ramp, hot → calm, all warm-undertoned:
+     terracotta → gold → sage */
   --high: #e8734a;
-  --mid: #6f97c0;
-  --low: #38a3a3;
+  --mid: #d9a441;
+  --low: #92ad63;
   --unknown: #8a97a8;
   --destructive: #d24a63;
 
@@ -60,18 +63,19 @@
 
     --accent: #cf5a30;
     --accent-2: #e07a4f;
-    --accent-3: #0d7680;
+    --accent-3: #b04a24;
     --amber: #cf5a30;
-    --grad-accent: linear-gradient(120deg, #0d7680 0%, #cf5a30 100%);
+    --grad-accent: linear-gradient(120deg, #b04a24 0%, #e07a4f 100%);
     --glow-accent: rgba(207, 90, 48, 0.26);
     --glow-amber: rgba(207, 90, 48, 0.24);
 
-    --chart-line: #0d7680;
+    --chart-line: #5c7a2e;
     --chart-news-dot: #cf5a30;
 
-    --high: #cf5a30;
-    --mid: #0f5499;
-    --low: #0d7680;
+    /* Same hot → gold → sage ramp, darkened for paper contrast */
+    --high: #b04a24;
+    --mid: #8f6f1f;
+    --low: #5c7a2e;
     --unknown: #6b7787;
     --destructive: #990f3d; /* FT claret */
   }
@@ -127,9 +131,9 @@ html::before {
   height: 42vw;
   top: 22vh;
   left: 26vw;
-  opacity: 0.32;
+  opacity: 0.18;
   border-radius: 42% 58% 63% 37% / 41% 44% 56% 59%;
-  background: radial-gradient(circle at 50% 50%, var(--amber), transparent 62%);
+  background: radial-gradient(circle at 50% 50%, #d9a441, transparent 62%);
   animation: liquid3 30s ease-in-out infinite alternate;
 }
 
@@ -138,10 +142,10 @@ body::before {
   height: 48vw;
   top: -14vw;
   left: -10vw;
-  opacity: 0.5;
+  opacity: 0.42;
   border-radius: 56% 44% 47% 53% / 52% 48% 52% 48%;
-  background: radial-gradient(circle at 30% 30%, #38a3a3, transparent 64%),
-    radial-gradient(circle at 70% 70%, #e8734a, transparent 60%);
+  background: radial-gradient(circle at 30% 30%, #e8734a, transparent 64%),
+    radial-gradient(circle at 70% 70%, #f4a07d, transparent 60%);
   animation: liquid1 24s ease-in-out infinite alternate;
 }
 
@@ -150,10 +154,10 @@ body::after {
   height: 42vw;
   bottom: -16vw;
   right: -12vw;
-  opacity: 0.48;
+  opacity: 0.5;
   border-radius: 48% 52% 60% 40% / 55% 45% 55% 45%;
-  background: radial-gradient(circle at 40% 40%, #f4a07d, transparent 62%),
-    radial-gradient(circle at 70% 60%, #38a3a3, transparent 60%);
+  background: radial-gradient(circle at 40% 40%, #1f4d6b, transparent 66%),
+    radial-gradient(circle at 70% 60%, #163a52, transparent 62%);
   animation: liquid2 28s ease-in-out infinite alternate;
 }
 

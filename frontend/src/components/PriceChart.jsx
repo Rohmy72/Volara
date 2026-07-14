@@ -40,7 +40,7 @@ export default function PriceChart({ priceSeries }) {
             type="monotone"
             dataKey="close"
             name="Close price"
-            stroke="var(--chart-line, #38a3a3)"
+            stroke="var(--chart-line, #92ad63)"
             dot={false}
             strokeWidth={1.75}
             isAnimationActive={false}

@@ -6,8 +6,8 @@ export default function TopNav() {
           <svg viewBox="0 0 32 32" width="30" height="30" role="img" aria-label="Volara logo">
             <defs>
               <linearGradient id="volaraGrad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#38a3a3" />
-                <stop offset="100%" stopColor="#e8734a" />
+                <stop offset="0%" stopColor="#d95f38" />
+                <stop offset="100%" stopColor="#f4a07d" />
               </linearGradient>
             </defs>
             <rect x="1.5" y="1.5" width="29" height="29" rx="9" fill="url(#volaraGrad)" />
@@ -15,7 +15,7 @@ export default function TopNav() {
             <path
               d="M6 20 L11 20 L14 11 L18 24 L21 15 L26 15"
               fill="none"
-              stroke="#06122a"
+              stroke="#12253a"
               strokeWidth="2.4"
               strokeLinecap="round"
               strokeLinejoin="round"
