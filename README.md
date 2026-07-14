@@ -17,11 +17,13 @@ Not investment advice. Correlational signal only.
    News RSS, and Yahoo Finance RSS for the ticker (no API key needed). If you
    set an `AV_KEY` (Alpha Vantage, free signup), we also blend in its
    `NEWS_SENTIMENT` feed for richer per-article relevance/sentiment scores.
-3. **Compute the News Reaction Ratio (NRR).** Each article is aligned to its
-   nearest trading day. NRR = average `|abnormal return|` on news days ÷
-   average `|abnormal return|` on quiet days.
-   - `NRR ~= 1` → news-insensitive: news days move like any other day.
-   - `NRR > ~2` → news-driven: idiosyncratic volatility concentrates on news days.
+3. **Compute News Beta** (shown as "News Beta" in the UI; called the News
+   Reaction Ratio / NRR in the research code and API fields). Each article is
+   aligned to its nearest trading day. News Beta = average `|abnormal return|`
+   on news days ÷ average `|abnormal return|` on quiet days.
+   - `~= 1` → news-insensitive: news days move like any other day.
+   - `> ~2` → news-driven: idiosyncratic volatility concentrates on news days.
+   The site's "What is News Beta?" page walks through the full methodology.
 4. **Extract buzzwords.** For each word in the news corpus, compare the
    average move size on days it appeared vs the average across all news
    days. Words with high "lift" are candidate volatility drivers — but this

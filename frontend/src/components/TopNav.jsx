@@ -1,7 +1,7 @@
 export default function TopNav() {
   return (
     <header className="topnav">
-      <a className="brand" href="/" aria-label="Volara home">
+      <a className="brand" href="#/" aria-label="Volara home">
         <span className="brand-mark" aria-hidden="true">
           <svg viewBox="0 0 32 32" width="30" height="30" role="img" aria-label="Volara logo">
             <defs>
@@ -33,13 +33,8 @@ export default function TopNav() {
           <span className="live-dot" aria-hidden="true" />
           Live data
         </span>
-        <a
-          className="nav-link"
-          href="https://github.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Docs
+        <a className="nav-link" href="#/news-beta">
+          What is News Beta?
         </a>
       </div>
     </header>
