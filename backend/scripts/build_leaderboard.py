@@ -36,6 +36,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from app.data.universe import MARKET_TICKER, UNIVERSE, meta_by_ticker, tickers
 from app.services import news_beta, news_sources
 from app.services.buzzwords import _ALWAYS_EXCLUDE, _tokenize
+from app.services.yahoo_session import session
 
 OUTPUT_PATH = Path(__file__).resolve().parents[1] / "app" / "data" / "leaderboard.json"
 
@@ -50,7 +51,12 @@ MAX_WORKERS = 6
 def fetch_all_prices(symbols: list[str]) -> pd.DataFrame:
     """One batched download for the whole universe + market benchmark."""
     data = yf.download(
-        symbols, period=PERIOD, auto_adjust=True, progress=False, group_by="ticker"
+        symbols,
+        period=PERIOD,
+        auto_adjust=True,
+        progress=False,
+        group_by="ticker",
+        session=session,
     )
     closes = {}
     for sym in symbols:
@@ -60,13 +66,13 @@ def fetch_all_prices(symbols: list[str]) -> pd.DataFrame:
             continue
         if len(series) > 100:
             closes[sym] = series
+    if not closes:
+        raise RuntimeError(
+            f"Yahoo returned no usable price history for any of the {len(symbols)} "
+            "universe symbols — refusing to overwrite the leaderboard with an empty snapshot."
+        )
     df = pd.DataFrame(closes)
-    # Around line 64 in fetch_all_prices
-    if isinstance(df.index, pd.DatetimeIndex):
-        df.index = df.index.normalize()
-    else:
-    # Handle the error gracefully or skip
-        print("Warning: DataFrame index is not a DatetimeIndex. Skipping normalization.")
+    df.index = df.index.normalize()
     return df
 
 

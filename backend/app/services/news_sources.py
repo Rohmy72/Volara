@@ -18,15 +18,10 @@ from curl_cffi import requests # type: ignore
 import yfinance as yf
 
 from app.core.config import settings
+from app.services.yahoo_session import session
 
 _REQUEST_TIMEOUT = 10
 _USER_AGENT = "Mozilla/5.0 (compatible; StockNewsVolatilityBot/1.0)"
-
-# Create a session that mimics a browser so Yahoo Finance doesn't block Render
-session = requests.Session(impersonate="chrome")
-session.headers.update({
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
-})
 
 _HTML_TAG_RE = re.compile(r"<[^>]+>")
 
@@ -59,7 +54,6 @@ def _normalize_title(title: str) -> str:
 def _from_yfinance(ticker: str) -> list[NewsItem]:
     items: list[NewsItem] = []
     try:
-        # Pass the browser session here so the news doesn't get blocked!
         raw = yf.Ticker(ticker, session=session).news or []
     except Exception:
         return items
