@@ -3,19 +3,10 @@ from __future__ import annotations
 
 import pandas as pd
 import yfinance as yf
-# Import requests from curl_cffi instead of standard requests
-from curl_cffi import requests  # type: ignore
 
 from app.data.universe import tickers
 from app.core.config import settings
-
-# Create a session that perfectly impersonates Google Chrome
-session = requests.Session(impersonate="chrome")
-# 1. Create the session with the browser User-Agent header
-session = requests.Session()
-session.headers.update({
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
-})
+from app.services.yahoo_session import session
 
 
 class TickerNotFoundError(Exception):
@@ -31,14 +22,13 @@ def fetch_price_history(ticker: str, period: str = None) -> pd.DataFrame: # type
     period = period or settings.default_period
     symbols = [ticker, settings.market_ticker]
 
-    # 2. Added session=session to yf.download to stop Render from being blocked!
     data = yf.download(
-        symbols, 
-        period=period, 
-        auto_adjust=True, 
-        progress=False, 
+        symbols,
+        period=period,
+        auto_adjust=True,
+        progress=False,
         group_by="ticker",
-        session=session
+        session=session,
     )
 
     if data.empty:
@@ -75,7 +65,6 @@ def compute_returns(price_df: pd.DataFrame) -> pd.DataFrame:
 
 def get_company_name(ticker: str) -> str:
     try:
-        # 3. Added session=session to the individual Ticker call here too!
         info = yf.Ticker(ticker, session=session).info
         return info.get("longName") or info.get("shortName") or ticker.upper()
     except Exception:
