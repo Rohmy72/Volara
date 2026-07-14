@@ -5,7 +5,7 @@ import pandas as pd
 import yfinance as yf
 import requests
 
-from backend.app.data.universe import tickers
+from app.data.universe import tickers
 from app.core.config import settings
 
 # 1. Create the session with the browser User-Agent header
