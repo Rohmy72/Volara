@@ -61,7 +61,12 @@ def fetch_all_prices(symbols: list[str]) -> pd.DataFrame:
         if len(series) > 100:
             closes[sym] = series
     df = pd.DataFrame(closes)
-    df.index = df.index.normalize()
+    # Around line 64 in fetch_all_prices
+    if isinstance(df.index, pd.DatetimeIndex):
+        df.index = df.index.normalize()
+    else:
+    # Handle the error gracefully or skip
+        print("Warning: DataFrame index is not a DatetimeIndex. Skipping normalization.")
     return df
 
 

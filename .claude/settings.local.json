@@ -11,7 +11,25 @@
       "mcp__21st__get_component",
       "Bash(curl -s -o /dev/null -w \"backend :8000 health → HTTP %{http_code}\\\\n\" http://localhost:8000/api/health)",
       "Bash(nohup python3 -m uvicorn app.main:app --port 8000)",
-      "Bash(curl -s -o /dev/null -w \"backend :8000 → HTTP %{http_code}\\\\n\" http://localhost:8000/api/health)"
+      "Bash(curl -s -o /dev/null -w \"backend :8000 → HTTP %{http_code}\\\\n\" http://localhost:8000/api/health)",
+      "Bash(kill 84924)",
+      "Bash(lsof -ti:8000)",
+      "Bash(xargs kill)",
+      "Bash(curl -s -o /dev/null -w \"backend  /api/health → %{http_code}\\\\n\" http://localhost:8000/api/health)",
+      "Bash(curl -s -o /dev/null -w \"frontend /          → %{http_code}\\\\n\" http://localhost:5173/)",
+      "Bash(curl -s -o /dev/null -w \"proxy    /api/health → %{http_code}\\\\n\" http://localhost:5173/api/health)",
+      "Bash(grep -E \"\\\\.env$|\\\\.mcp\\\\.json\")",
+      "Bash(gh repo *)",
+      "Bash(git rm *)",
+      "Bash(awk '{print \"still on disk:\", $NF}')",
+      "Bash(git checkout *)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(gh pr create --repo Rohmy72/Volara --base main --head news-beta-rename-and-methodology-page --title 'Rename metric to News Beta + add methodology page' --body ' *)",
+      "Bash(gh auth *)",
+      "Bash(sleep 3; cat /tmp/gh_login_out.txt 2>/dev/null; echo \"---status---\"; gh auth status 2>&1 | head -4)",
+      "Bash(awk '{print $2}')"
     ]
   }
 }
