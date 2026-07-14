@@ -14,7 +14,7 @@ from dataclasses import dataclass
 from datetime import datetime, timezone
 
 import feedparser
-import requests
+from curl_cffi import requests # type: ignore
 import yfinance as yf
 
 from app.core.config import settings
@@ -23,7 +23,7 @@ _REQUEST_TIMEOUT = 10
 _USER_AGENT = "Mozilla/5.0 (compatible; StockNewsVolatilityBot/1.0)"
 
 # Create a session that mimics a browser so Yahoo Finance doesn't block Render
-session = requests.Session()
+session = requests.Session(impersonate="chrome")
 session.headers.update({
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
 })
