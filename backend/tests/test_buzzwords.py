@@ -27,8 +27,8 @@ def test_high_move_word_gets_high_lift():
 
     # Big abnormal moves on the "recall" days, small moves elsewhere.
     abnormal = pd.Series(0.001, index=dates)
-    abnormal[dates[0]] = 0.08
-    abnormal[dates[2]] = 0.07
+    abnormal[dates[0]] = 0.08 # type: ignore
+    abnormal[dates[2]] = 0.07 # type: ignore
 
     buzzwords = extract_buzzwords(
         news_day_map, abnormal, ticker="TEST", company_name="Test Co", min_occurrences=2

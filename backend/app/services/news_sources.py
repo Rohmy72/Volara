@@ -22,6 +22,12 @@ from app.core.config import settings
 _REQUEST_TIMEOUT = 10
 _USER_AGENT = "Mozilla/5.0 (compatible; StockNewsVolatilityBot/1.0)"
 
+# Create a session that mimics a browser so Yahoo Finance doesn't block Render
+session = requests.Session()
+session.headers.update({
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
+})
+
 _HTML_TAG_RE = re.compile(r"<[^>]+>")
 
 
@@ -53,7 +59,8 @@ def _normalize_title(title: str) -> str:
 def _from_yfinance(ticker: str) -> list[NewsItem]:
     items: list[NewsItem] = []
     try:
-        raw = yf.Ticker(ticker).news or []
+        # Pass the browser session here so the news doesn't get blocked!
+        raw = yf.Ticker(ticker, session=session).news or []
     except Exception:
         return items
 
@@ -111,7 +118,7 @@ def _from_google_news_rss(ticker: str, company_name: str | None) -> list[NewsIte
     query = f"{ticker} stock"
     if company_name and company_name.upper() != ticker.upper():
         query = f"{company_name} {ticker} stock"
-    url = f"https://news.google.com/rss/search?q={requests.utils.quote(query)}&hl=en-US&gl=US&ceid=US:en"
+    url = f"https://news.google.com/rss/search?q={requests.utils.quote(query)}&hl=en-US&gl=US&ceid=US:en" # type: ignore
 
     items: list[NewsItem] = []
     try:
@@ -124,19 +131,19 @@ def _from_google_news_rss(ticker: str, company_name: str | None) -> list[NewsIte
     for entry in feed.entries:
         published_at = None
         if getattr(entry, "published_parsed", None):
-            published_at = datetime(*entry.published_parsed[:6], tzinfo=timezone.utc)
+            published_at = datetime(*entry.published_parsed[:6], tzinfo=timezone.utc) # type: ignore
         if published_at is None:
             continue
         source = ""
         if hasattr(entry, "source") and getattr(entry.source, "title", None):
-            source = entry.source.title
+            source = entry.source.title # type: ignore
         items.append(
             NewsItem(
-                title=entry.get("title", ""),
+                title=entry.get("title", ""), # type: ignore
                 source=source or "Google News",
-                url=entry.get("link", ""),
+                url=entry.get("link", ""), # type: ignore
                 published_at=published_at,
-                summary=_clean_summary(entry.get("summary", "")),
+                summary=_clean_summary(entry.get("summary", "")), # type: ignore
             )
         )
     return items
@@ -155,16 +162,16 @@ def _from_yahoo_finance_rss(ticker: str) -> list[NewsItem]:
     for entry in feed.entries:
         published_at = None
         if getattr(entry, "published_parsed", None):
-            published_at = datetime(*entry.published_parsed[:6], tzinfo=timezone.utc)
+            published_at = datetime(*entry.published_parsed[:6], tzinfo=timezone.utc) # type: ignore
         if published_at is None:
             continue
         items.append(
             NewsItem(
-                title=entry.get("title", ""),
+                title=entry.get("title", ""), # type: ignore
                 source="Yahoo Finance",
-                url=entry.get("link", ""),
+                url=entry.get("link", ""), # type: ignore
                 published_at=published_at,
-                summary=_clean_summary(entry.get("summary", "")),
+                summary=_clean_summary(entry.get("summary", "")), # type: ignore
             )
         )
     return items
