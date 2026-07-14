@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(command -v claude)",
+      "Bash(claude --version)",
+      "Bash(python3 -c \"import json; d=json.load\\(open\\('.mcp.json'\\)\\); s=d['mcpServers']['21st']; print\\('OK: server \\\\\"21st\\\\\" transport=%s url=%s header-keys=%s' % \\(s['type'], s['url'], list\\(s['headers']\\)\\)\\)\")",
+      "Bash(git check-ignore *)",
+      "mcp__21st__get_usage",
+      "mcp__21st__search_logo",
+      "mcp__21st__search",
+      "mcp__21st__get_component",
+      "Bash(curl -s -o /dev/null -w \"backend :8000 health → HTTP %{http_code}\\\\n\" http://localhost:8000/api/health)",
+      "Bash(nohup python3 -m uvicorn app.main:app --port 8000)",
+      "Bash(curl -s -o /dev/null -w \"backend :8000 → HTTP %{http_code}\\\\n\" http://localhost:8000/api/health)"
+    ]
+  }
+}

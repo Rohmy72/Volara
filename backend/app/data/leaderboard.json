@@ -1,0 +1,1018 @@
+{
+  "generated_at": "2026-07-14T03:24:15.551501+00:00",
+  "market_benchmark": "SPY",
+  "period": "1y",
+  "n_ranked": 51,
+  "sectors": [
+    "Communication",
+    "Consumer Discretionary",
+    "Consumer Staples",
+    "Energy",
+    "Financials",
+    "Healthcare",
+    "Speculative",
+    "Technology"
+  ],
+  "stocks": [
+    {
+      "ticker": "IBM",
+      "name": "IBM",
+      "sector": "Technology",
+      "nrr": 2.57,
+      "verdict_label": "News-driven",
+      "n_news_days": 24
+    },
+    {
+      "ticker": "QCOM",
+      "name": "Qualcomm",
+      "sector": "Technology",
+      "nrr": 2.38,
+      "verdict_label": "News-driven",
+      "n_news_days": 33
+    },
+    {
+      "ticker": "META",
+      "name": "Meta Platforms",
+      "sector": "Communication",
+      "nrr": 2.31,
+      "verdict_label": "News-driven",
+      "n_news_days": 16
+    },
+    {
+      "ticker": "AMC",
+      "name": "AMC Entertainment",
+      "sector": "Speculative",
+      "nrr": 2.17,
+      "verdict_label": "News-driven",
+      "n_news_days": 43
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "sector": "Technology",
+      "nrr": 2.15,
+      "verdict_label": "News-driven",
+      "n_news_days": 29
+    },
+    {
+      "ticker": "CSCO",
+      "name": "Cisco",
+      "sector": "Technology",
+      "nrr": 1.89,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 45
+    },
+    {
+      "ticker": "RIVN",
+      "name": "Rivian",
+      "sector": "Speculative",
+      "nrr": 1.85,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 22
+    },
+    {
+      "ticker": "RBLX",
+      "name": "Roblox",
+      "sector": "Speculative",
+      "nrr": 1.66,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 42
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple",
+      "sector": "Technology",
+      "nrr": 1.62,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 29
+    },
+    {
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "sector": "Speculative",
+      "nrr": 1.6,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 52
+    },
+    {
+      "ticker": "JNJ",
+      "name": "Johnson & Johnson",
+      "sector": "Healthcare",
+      "nrr": 1.57,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 34
+    },
+    {
+      "ticker": "JPM",
+      "name": "JPMorgan Chase",
+      "sector": "Financials",
+      "nrr": 1.54,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 38
+    },
+    {
+      "ticker": "T",
+      "name": "AT&T",
+      "sector": "Communication",
+      "nrr": 1.53,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 28
+    },
+    {
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "sector": "Technology",
+      "nrr": 1.48,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 29
+    },
+    {
+      "ticker": "DIS",
+      "name": "Disney",
+      "sector": "Communication",
+      "nrr": 1.48,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 48
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "sector": "Consumer Discretionary",
+      "nrr": 1.48,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 27
+    },
+    {
+      "ticker": "MCD",
+      "name": "McDonald's",
+      "sector": "Consumer Discretionary",
+      "nrr": 1.48,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 51
+    },
+    {
+      "ticker": "COST",
+      "name": "Costco",
+      "sector": "Consumer Staples",
+      "nrr": 1.48,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 35
+    },
+    {
+      "ticker": "VZ",
+      "name": "Verizon",
+      "sector": "Communication",
+      "nrr": 1.47,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 38
+    },
+    {
+      "ticker": "MA",
+      "name": "Mastercard",
+      "sector": "Financials",
+      "nrr": 1.47,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 44
+    },
+    {
+      "ticker": "LCID",
+      "name": "Lucid",
+      "sector": "Speculative",
+      "nrr": 1.47,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 44
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel",
+      "sector": "Technology",
+      "nrr": 1.44,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 29
+    },
+    {
+      "ticker": "V",
+      "name": "Visa",
+      "sector": "Financials",
+      "nrr": 1.43,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 53
+    },
+    {
+      "ticker": "WFC",
+      "name": "Wells Fargo",
+      "sector": "Financials",
+      "nrr": 1.42,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 48
+    },
+    {
+      "ticker": "WMT",
+      "name": "Walmart",
+      "sector": "Consumer Staples",
+      "nrr": 1.4,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 36
+    },
+    {
+      "ticker": "ORCL",
+      "name": "Oracle",
+      "sector": "Technology",
+      "nrr": 1.38,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 34
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "sector": "Consumer Discretionary",
+      "nrr": 1.36,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 35
+    },
+    {
+      "ticker": "GS",
+      "name": "Goldman Sachs",
+      "sector": "Financials",
+      "nrr": 1.33,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 43
+    },
+    {
+      "ticker": "GME",
+      "name": "GameStop",
+      "sector": "Speculative",
+      "nrr": 1.33,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 56
+    },
+    {
+      "ticker": "MRK",
+      "name": "Merck",
+      "sector": "Healthcare",
+      "nrr": 1.3,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 61
+    },
+    {
+      "ticker": "CVX",
+      "name": "Chevron",
+      "sector": "Energy",
+      "nrr": 1.3,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 39
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "sector": "Technology",
+      "nrr": 1.28,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 27
+    },
+    {
+      "ticker": "KO",
+      "name": "Coca-Cola",
+      "sector": "Consumer Staples",
+      "nrr": 1.28,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 35
+    },
+    {
+      "ticker": "ABBV",
+      "name": "AbbVie",
+      "sector": "Healthcare",
+      "nrr": 1.27,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 50
+    },
+    {
+      "ticker": "MSTR",
+      "name": "MicroStrategy",
+      "sector": "Speculative",
+      "nrr": 1.27,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 59
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "sector": "Communication",
+      "nrr": 1.25,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 36
+    },
+    {
+      "ticker": "XOM",
+      "name": "ExxonMobil",
+      "sector": "Energy",
+      "nrr": 1.25,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 41
+    },
+    {
+      "ticker": "SOFI",
+      "name": "SoFi",
+      "sector": "Speculative",
+      "nrr": 1.25,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 33
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "sector": "Speculative",
+      "nrr": 1.24,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 32
+    },
+    {
+      "ticker": "PG",
+      "name": "Procter & Gamble",
+      "sector": "Consumer Staples",
+      "nrr": 1.23,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 31
+    },
+    {
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "sector": "Speculative",
+      "nrr": 1.23,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 48
+    },
+    {
+      "ticker": "COP",
+      "name": "ConocoPhillips",
+      "sector": "Energy",
+      "nrr": 1.21,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 59
+    },
+    {
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices",
+      "sector": "Technology",
+      "nrr": 1.19,
+      "verdict_label": "Not particularly news-driven",
+      "n_news_days": 28
+    },
+    {
+      "ticker": "NFLX",
+      "name": "Netflix",
+      "sector": "Communication",
+      "nrr": 1.18,
+      "verdict_label": "Not particularly news-driven",
+      "n_news_days": 40
+    },
+    {
+      "ticker": "BAC",
+      "name": "Bank of America",
+      "sector": "Financials",
+      "nrr": 1.18,
+      "verdict_label": "Not particularly news-driven",
+      "n_news_days": 41
+    },
+    {
+      "ticker": "PFE",
+      "name": "Pfizer",
+      "sector": "Healthcare",
+      "nrr": 1.16,
+      "verdict_label": "Not particularly news-driven",
+      "n_news_days": 55
+    },
+    {
+      "ticker": "UNH",
+      "name": "UnitedHealth",
+      "sector": "Healthcare",
+      "nrr": 1.12,
+      "verdict_label": "Not particularly news-driven",
+      "n_news_days": 44
+    },
+    {
+      "ticker": "PEP",
+      "name": "PepsiCo",
+      "sector": "Consumer Staples",
+      "nrr": 1.1,
+      "verdict_label": "Not particularly news-driven",
+      "n_news_days": 23
+    },
+    {
+      "ticker": "HD",
+      "name": "Home Depot",
+      "sector": "Consumer Discretionary",
+      "nrr": 1.05,
+      "verdict_label": "Not particularly news-driven",
+      "n_news_days": 38
+    },
+    {
+      "ticker": "NKE",
+      "name": "Nike",
+      "sector": "Consumer Discretionary",
+      "nrr": 1.01,
+      "verdict_label": "Not particularly news-driven",
+      "n_news_days": 41
+    },
+    {
+      "ticker": "SBUX",
+      "name": "Starbucks",
+      "sector": "Consumer Discretionary",
+      "nrr": 1.01,
+      "verdict_label": "Not particularly news-driven",
+      "n_news_days": 44
+    }
+  ],
+  "buzzwords": {
+    "week": [
+      {
+        "word": "craters",
+        "lift": 7.61,
+        "occurrences": 2,
+        "avg_move_pct": 12.75,
+        "tickers": [
+          "LCID",
+          "RIVN"
+        ],
+        "example_headline": "Rivian Craters 14% on 75M Share Offering, Lucid Falls 9% as EV Rally Reverses - Yahoo Finance"
+      },
+      {
+        "word": "million-share",
+        "lift": 7.23,
+        "occurrences": 2,
+        "avg_move_pct": 12.11,
+        "tickers": [
+          "RIVN"
+        ],
+        "example_headline": "RIVN Stock Sinks as Rivian Announces 75 Million-Share Offering - Yahoo Finance"
+      },
+      {
+        "word": "lucid",
+        "lift": 6.47,
+        "occurrences": 2,
+        "avg_move_pct": 10.84,
+        "tickers": [
+          "RIVN"
+        ],
+        "example_headline": "Rivian Craters 14% on 75M Share Offering, Lucid Falls 9% as EV Rally Reverses - Yahoo Finance"
+      },
+      {
+        "word": "reverses",
+        "lift": 5.96,
+        "occurrences": 3,
+        "avg_move_pct": 9.98,
+        "tickers": [
+          "LCID",
+          "RIVN"
+        ],
+        "example_headline": "Rivian Craters 14% on 75M Share Offering, Lucid Falls 9% as EV Rally Reverses - Yahoo Finance"
+      },
+      {
+        "word": "stalled",
+        "lift": 5.62,
+        "occurrences": 2,
+        "avg_move_pct": 9.41,
+        "tickers": [
+          "RIVN"
+        ],
+        "example_headline": "Rivian Automotive Stock Stalled by Share Offering - Schaeffer's Investment Research"
+      },
+      {
+        "word": "jefferies",
+        "lift": 5.59,
+        "occurrences": 2,
+        "avg_move_pct": 9.37,
+        "tickers": [
+          "RIVN",
+          "TSLA"
+        ],
+        "example_headline": "Jefferies Financial Group Forecasts Strong Price Appreciation for Rivian Automotive (NASDAQ:RIVN) Stock - MarketBeat"
+      },
+      {
+        "word": "secondary",
+        "lift": 5.51,
+        "occurrences": 4,
+        "avg_move_pct": 9.24,
+        "tickers": [
+          "LCID",
+          "RIVN"
+        ],
+        "example_headline": "Rivian (RIVN) stock drops on news of $1.5 billion secondary share offering - Shacknews"
+      },
+      {
+        "word": "registered",
+        "lift": 4.06,
+        "occurrences": 2,
+        "avg_move_pct": 6.8,
+        "tickers": [
+          "AMC"
+        ],
+        "example_headline": "Is AMC Entertainment Holdings (AMC) Still Undervalued As It Raises Equity To Cut Debt?"
+      },
+      {
+        "word": "specialty",
+        "lift": 4.05,
+        "occurrences": 2,
+        "avg_move_pct": 6.79,
+        "tickers": [
+          "AMC",
+          "T"
+        ],
+        "example_headline": "Fathom Entertainment Names Jason Brenek New Chief Executive Officer"
+      },
+      {
+        "word": "film",
+        "lift": 3.87,
+        "occurrences": 2,
+        "avg_move_pct": 6.48,
+        "tickers": [
+          "AMC",
+          "DIS"
+        ],
+        "example_headline": "Fathom Entertainment taps Jason Brenek as CEO ahead of October film rollout - Stock Titan"
+      },
+      {
+        "word": "theatrical",
+        "lift": 3.87,
+        "occurrences": 2,
+        "avg_move_pct": 6.48,
+        "tickers": [
+          "AMC",
+          "DIS"
+        ],
+        "example_headline": "Fathom Entertainment Names Jason Brenek New Chief Executive Officer"
+      },
+      {
+        "word": "theater",
+        "lift": 3.87,
+        "occurrences": 2,
+        "avg_move_pct": 6.48,
+        "tickers": [
+          "AMC",
+          "DIS"
+        ],
+        "example_headline": "AMC Stock Surges as Macquarie Lifts Theater Box Office Outlook - Benzinga"
+      },
+      {
+        "word": "one-month",
+        "lift": 3.84,
+        "occurrences": 2,
+        "avg_move_pct": 6.44,
+        "tickers": [
+          "INTC",
+          "LCID"
+        ],
+        "example_headline": "Rivian Craters 14% on 75M Share Offering, Lucid Falls 9% as EV Rally Reverses"
+      },
+      {
+        "word": "steep",
+        "lift": 3.73,
+        "occurrences": 2,
+        "avg_move_pct": 6.25,
+        "tickers": [
+          "AMC",
+          "MCD"
+        ],
+        "example_headline": "AMC (AMC) Stock Looks Undervalued On Sales But Overvalued In Broader Checks"
+      },
+      {
+        "word": "cleanup",
+        "lift": 3.66,
+        "occurrences": 2,
+        "avg_move_pct": 6.13,
+        "tickers": [
+          "AMC",
+          "COST"
+        ],
+        "example_headline": "AMC Stock Rallies As Record Box Office Fuels Debt Cleanup - timothysykes.com"
+      },
+      {
+        "word": "maker",
+        "lift": 3.56,
+        "occurrences": 7,
+        "avg_move_pct": 5.97,
+        "tickers": [
+          "AAPL",
+          "AMD",
+          "CRM",
+          "CVX"
+        ],
+        "example_headline": "Rivian stock falls as EV maker launches 75M share public offering - Yahoo! Finance Canada"
+      },
+      {
+        "word": "concerts",
+        "lift": 3.55,
+        "occurrences": 2,
+        "avg_move_pct": 5.95,
+        "tickers": [
+          "AMC"
+        ],
+        "example_headline": "AMC (AMC) Stock Looks Undervalued On Sales But Overvalued In Broader Checks"
+      },
+      {
+        "word": "broke",
+        "lift": 3.52,
+        "occurrences": 2,
+        "avg_move_pct": 5.89,
+        "tickers": [
+          "ORCL",
+          "RIVN"
+        ],
+        "example_headline": "Rivian Automotive (RIVN) Recently Broke Out Above the 20-Day Moving Average - Yahoo Finance Singapore"
+      }
+    ],
+    "month": [
+      {
+        "word": "redeem",
+        "lift": 6.6,
+        "occurrences": 3,
+        "avg_move_pct": 13.06,
+        "tickers": [
+          "AMC"
+        ],
+        "example_headline": "AMC Theatres\u2019 Stock Plunges After Revealing Fresh Cash Raise to Redeem Costly Debt - Yahoo Finance"
+      },
+      {
+        "word": "craters",
+        "lift": 6.45,
+        "occurrences": 2,
+        "avg_move_pct": 12.75,
+        "tickers": [
+          "LCID",
+          "RIVN"
+        ],
+        "example_headline": "Rivian Craters 14% on 75M Share Offering, Lucid Falls 9% as EV Rally Reverses - Yahoo Finance"
+      },
+      {
+        "word": "million-share",
+        "lift": 6.12,
+        "occurrences": 2,
+        "avg_move_pct": 12.11,
+        "tickers": [
+          "RIVN"
+        ],
+        "example_headline": "RIVN Stock Sinks as Rivian Announces 75 Million-Share Offering - Yahoo Finance"
+      },
+      {
+        "word": "lining",
+        "lift": 5.81,
+        "occurrences": 2,
+        "avg_move_pct": 11.48,
+        "tickers": [
+          "AMC",
+          "QCOM"
+        ],
+        "example_headline": "AMC Stock Heads For Worst Day In Nearly Three Years \u2013 But Retail Says Debt Paydown Offers Silver Lining - Yahoo Finance"
+      },
+      {
+        "word": "lucid",
+        "lift": 5.48,
+        "occurrences": 2,
+        "avg_move_pct": 10.84,
+        "tickers": [
+          "RIVN"
+        ],
+        "example_headline": "Rivian Craters 14% on 75M Share Offering, Lucid Falls 9% as EV Rally Reverses - Yahoo Finance"
+      },
+      {
+        "word": "reverses",
+        "lift": 5.05,
+        "occurrences": 3,
+        "avg_move_pct": 9.98,
+        "tickers": [
+          "LCID",
+          "RIVN"
+        ],
+        "example_headline": "Rivian Craters 14% on 75M Share Offering, Lucid Falls 9% as EV Rally Reverses - Yahoo Finance"
+      },
+      {
+        "word": "stalled",
+        "lift": 4.76,
+        "occurrences": 2,
+        "avg_move_pct": 9.41,
+        "tickers": [
+          "RIVN"
+        ],
+        "example_headline": "Rivian Automotive Stock Stalled by Share Offering - Schaeffer's Investment Research"
+      },
+      {
+        "word": "slumps",
+        "lift": 4.72,
+        "occurrences": 2,
+        "avg_move_pct": 9.32,
+        "tickers": [
+          "DIS",
+          "RIVN"
+        ],
+        "example_headline": "RIVN Stock Slumps Overnight: Rivian Director, Foundation File Stock Sale Notices Amid $1.5B Offering Plan - TradingView"
+      },
+      {
+        "word": "secondary",
+        "lift": 4.67,
+        "occurrences": 4,
+        "avg_move_pct": 9.24,
+        "tickers": [
+          "LCID",
+          "RIVN"
+        ],
+        "example_headline": "Rivian (RIVN) stock drops on news of $1.5 billion secondary share offering - Shacknews"
+      },
+      {
+        "word": "file",
+        "lift": 4.63,
+        "occurrences": 2,
+        "avg_move_pct": 9.16,
+        "tickers": [
+          "DIS",
+          "RIVN"
+        ],
+        "example_headline": "RIVN Stock Slumps Overnight: Rivian Director, Foundation File Stock Sale Notices Amid $1.5B Offering Plan - TradingView"
+      },
+      {
+        "word": "cosmos",
+        "lift": 4.62,
+        "occurrences": 2,
+        "avg_move_pct": 9.13,
+        "tickers": [
+          "LCID",
+          "MRK"
+        ],
+        "example_headline": "Lucid Stock Surges 15% as Investors Weigh Cost Cuts, Cosmos Push | EV - eletric-vehicles.com"
+      },
+      {
+        "word": "electrek",
+        "lift": 4.48,
+        "occurrences": 2,
+        "avg_move_pct": 8.86,
+        "tickers": [
+          "RIVN",
+          "TSLA"
+        ],
+        "example_headline": "Rivian (RIVN) launches 75M-share sale to raise ~$1.5B for R2 push - Electrek"
+      },
+      {
+        "word": "registered",
+        "lift": 4.3,
+        "occurrences": 5,
+        "avg_move_pct": 8.5,
+        "tickers": [
+          "AMC"
+        ],
+        "example_headline": "AMC Entertainment Holdings, Inc. Announces Pricing of $200 Million Registered Direct Offering of Common Stock - AMC Entertainment Holdings, Inc."
+      },
+      {
+        "word": "foundation",
+        "lift": 4.26,
+        "occurrences": 4,
+        "avg_move_pct": 8.43,
+        "tickers": [
+          "ABBV",
+          "LCID",
+          "RBLX",
+          "RIVN"
+        ],
+        "example_headline": "RIVN Stock Slumps Overnight: Rivian Director, Foundation File Stock Sale Notices Amid $1.5B Offering Plan - TradingView"
+      },
+      {
+        "word": "lucid's",
+        "lift": 4.16,
+        "occurrences": 2,
+        "avg_move_pct": 8.22,
+        "tickers": [
+          "LCID"
+        ],
+        "example_headline": "Why Lucid Stock Dropped Today"
+      },
+      {
+        "word": "electric-vehicle",
+        "lift": 4.16,
+        "occurrences": 2,
+        "avg_move_pct": 8.22,
+        "tickers": [
+          "LCID"
+        ],
+        "example_headline": "Rivian Craters 14% on 75M Share Offering, Lucid Falls 9% as EV Rally Reverses"
+      },
+      {
+        "word": "site",
+        "lift": 4.14,
+        "occurrences": 2,
+        "avg_move_pct": 8.19,
+        "tickers": [
+          "INTC",
+          "RBLX"
+        ],
+        "example_headline": "Gaming ETF Becomes Growth Fund; Trailing Dividend Payout No Longer Reflects New Holdings"
+      },
+      {
+        "word": "revealing",
+        "lift": 3.99,
+        "occurrences": 3,
+        "avg_move_pct": 7.89,
+        "tickers": [
+          "AMC",
+          "ORCL",
+          "XOM"
+        ],
+        "example_headline": "AMC Theatres\u2019 Stock Plunges After Revealing Fresh Cash Raise to Redeem Costly Debt - Yahoo Finance"
+      }
+    ],
+    "year": [
+      {
+        "word": "redeem",
+        "lift": 6.5,
+        "occurrences": 3,
+        "avg_move_pct": 13.06,
+        "tickers": [
+          "AMC"
+        ],
+        "example_headline": "AMC Theatres\u2019 Stock Plunges After Revealing Fresh Cash Raise to Redeem Costly Debt - Yahoo Finance"
+      },
+      {
+        "word": "craters",
+        "lift": 6.34,
+        "occurrences": 2,
+        "avg_move_pct": 12.75,
+        "tickers": [
+          "LCID",
+          "RIVN"
+        ],
+        "example_headline": "Rivian Craters 14% on 75M Share Offering, Lucid Falls 9% as EV Rally Reverses - Yahoo Finance"
+      },
+      {
+        "word": "million-share",
+        "lift": 6.03,
+        "occurrences": 2,
+        "avg_move_pct": 12.11,
+        "tickers": [
+          "RIVN"
+        ],
+        "example_headline": "RIVN Stock Sinks as Rivian Announces 75 Million-Share Offering - Yahoo Finance"
+      },
+      {
+        "word": "lining",
+        "lift": 5.71,
+        "occurrences": 2,
+        "avg_move_pct": 11.48,
+        "tickers": [
+          "AMC",
+          "QCOM"
+        ],
+        "example_headline": "AMC Stock Heads For Worst Day In Nearly Three Years \u2013 But Retail Says Debt Paydown Offers Silver Lining - Yahoo Finance"
+      },
+      {
+        "word": "sinking",
+        "lift": 5.61,
+        "occurrences": 3,
+        "avg_move_pct": 11.27,
+        "tickers": [
+          "AMC",
+          "AMD",
+          "LCID"
+        ],
+        "example_headline": "Why is AMC Entertainment stock sinking 19% in premarket today? - Investing.com"
+      },
+      {
+        "word": "lucid",
+        "lift": 5.39,
+        "occurrences": 2,
+        "avg_move_pct": 10.84,
+        "tickers": [
+          "RIVN"
+        ],
+        "example_headline": "Rivian Craters 14% on 75M Share Offering, Lucid Falls 9% as EV Rally Reverses - Yahoo Finance"
+      },
+      {
+        "word": "reverses",
+        "lift": 4.97,
+        "occurrences": 3,
+        "avg_move_pct": 9.98,
+        "tickers": [
+          "LCID",
+          "RIVN"
+        ],
+        "example_headline": "Rivian Craters 14% on 75M Share Offering, Lucid Falls 9% as EV Rally Reverses - Yahoo Finance"
+      },
+      {
+        "word": "stalled",
+        "lift": 4.68,
+        "occurrences": 2,
+        "avg_move_pct": 9.41,
+        "tickers": [
+          "RIVN"
+        ],
+        "example_headline": "Rivian Automotive Stock Stalled by Share Offering - Schaeffer's Investment Research"
+      },
+      {
+        "word": "secondary",
+        "lift": 4.6,
+        "occurrences": 4,
+        "avg_move_pct": 9.24,
+        "tickers": [
+          "LCID",
+          "RIVN"
+        ],
+        "example_headline": "Rivian (RIVN) stock drops on news of $1.5 billion secondary share offering - Shacknews"
+      },
+      {
+        "word": "file",
+        "lift": 4.56,
+        "occurrences": 2,
+        "avg_move_pct": 9.16,
+        "tickers": [
+          "DIS",
+          "RIVN"
+        ],
+        "example_headline": "RIVN Stock Slumps Overnight: Rivian Director, Foundation File Stock Sale Notices Amid $1.5B Offering Plan - TradingView"
+      },
+      {
+        "word": "cosmos",
+        "lift": 4.54,
+        "occurrences": 2,
+        "avg_move_pct": 9.13,
+        "tickers": [
+          "LCID",
+          "MRK"
+        ],
+        "example_headline": "Lucid Stock Surges 15% as Investors Weigh Cost Cuts, Cosmos Push | EV - eletric-vehicles.com"
+      },
+      {
+        "word": "electrek",
+        "lift": 4.41,
+        "occurrences": 2,
+        "avg_move_pct": 8.86,
+        "tickers": [
+          "RIVN",
+          "TSLA"
+        ],
+        "example_headline": "Rivian (RIVN) launches 75M-share sale to raise ~$1.5B for R2 push - Electrek"
+      },
+      {
+        "word": "foundation",
+        "lift": 4.19,
+        "occurrences": 4,
+        "avg_move_pct": 8.43,
+        "tickers": [
+          "ABBV",
+          "LCID",
+          "RBLX",
+          "RIVN"
+        ],
+        "example_headline": "RIVN Stock Slumps Overnight: Rivian Director, Foundation File Stock Sale Notices Amid $1.5B Offering Plan - TradingView"
+      },
+      {
+        "word": "registered",
+        "lift": 4.1,
+        "occurrences": 6,
+        "avg_move_pct": 8.24,
+        "tickers": [
+          "AMC",
+          "LCID"
+        ],
+        "example_headline": "AMC Entertainment Holdings, Inc. Announces Pricing of $200 Million Registered Direct Offering of Common Stock - AMC Entertainment Holdings, Inc."
+      },
+      {
+        "word": "lucid's",
+        "lift": 4.09,
+        "occurrences": 2,
+        "avg_move_pct": 8.22,
+        "tickers": [
+          "LCID"
+        ],
+        "example_headline": "Why Lucid Stock Dropped Today"
+      },
+      {
+        "word": "electric-vehicle",
+        "lift": 4.09,
+        "occurrences": 2,
+        "avg_move_pct": 8.22,
+        "tickers": [
+          "LCID"
+        ],
+        "example_headline": "Rivian Craters 14% on 75M Share Offering, Lucid Falls 9% as EV Rally Reverses"
+      },
+      {
+        "word": "site",
+        "lift": 4.08,
+        "occurrences": 2,
+        "avg_move_pct": 8.19,
+        "tickers": [
+          "INTC",
+          "RBLX"
+        ],
+        "example_headline": "Gaming ETF Becomes Growth Fund; Trailing Dividend Payout No Longer Reflects New Holdings"
+      },
+      {
+        "word": "theater",
+        "lift": 4.01,
+        "occurrences": 4,
+        "avg_move_pct": 8.07,
+        "tickers": [
+          "AMC",
+          "DIS"
+        ],
+        "example_headline": "AMC Stock Surges as Macquarie Lifts Theater Box Office Outlook - Benzinga"
+      }
+    ]
+  }
+}
