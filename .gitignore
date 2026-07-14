@@ -27,3 +27,6 @@ frontend/.vite/
 
 # Research script output
 research/*.csv
+
+# Claude Code (local tooling config)
+.claude/
