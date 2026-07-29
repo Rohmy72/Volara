@@ -13,6 +13,7 @@ export default function StockLeaderboard({ stocks, sectors, onSelectTicker }) {
 
   const most = filtered.slice(0, TOP_N);
   const least = filtered.slice(-TOP_N).reverse();
+  const topMover = useMemo(() => biggestMover(filtered), [filtered]);
 
   return (
     <div className="panel lb-panel">
@@ -43,6 +44,17 @@ export default function StockLeaderboard({ stocks, sectors, onSelectTicker }) {
         ))}
       </div>
 
+      {topMover && (
+        <p className="lb-mover">
+          Biggest mover:{" "}
+          <button className="lb-mover-ticker" onClick={() => onSelectTicker(topMover.ticker)}>
+            {topMover.ticker}
+          </button>{" "}
+          <Movement stock={topMover} />
+          <span className="muted"> since last update</span>
+        </p>
+      )}
+
       {filtered.length === 0 ? (
         <p className="muted">No ranked stocks in this sector.</p>
       ) : (
@@ -67,6 +79,17 @@ export default function StockLeaderboard({ stocks, sectors, onSelectTicker }) {
   );
 }
 
+// Largest absolute rank change since the previous snapshot (new entries and
+// unchanged rows don't count as "movers").
+function biggestMover(rows) {
+  let best = null;
+  for (const r of rows) {
+    if (typeof r.rank_delta !== "number" || r.rank_delta === 0) continue;
+    if (!best || Math.abs(r.rank_delta) > Math.abs(best.rank_delta)) best = r;
+  }
+  return best;
+}
+
 function LbSection({ title, rows, tone, onSelectTicker }) {
   const maxNrr = Math.max(...rows.map((r) => r.nrr), 1);
   return (
@@ -78,7 +101,7 @@ function LbSection({ title, rows, tone, onSelectTicker }) {
             <button
               className="lb-row"
               onClick={() => onSelectTicker(r.ticker)}
-              title={`${r.name} · ${r.sector} · ${r.verdict_label}`}
+              title={rowTitle(r)}
             >
               <span className="lb-ticker">{r.ticker}</span>
               <span className="lb-bar-track">
@@ -88,10 +111,50 @@ function LbSection({ title, rows, tone, onSelectTicker }) {
                 />
               </span>
               <span className="lb-nrr">{r.nrr.toFixed(2)}</span>
+              <Movement stock={r} />
             </button>
           </li>
         ))}
       </ol>
     </div>
+  );
+}
+
+function rowTitle(r) {
+  let t = `${r.name} · ${r.sector} · ${r.verdict_label}`;
+  if (r.is_new) {
+    t += " · new to the board";
+  } else if (typeof r.nrr_delta === "number" && r.nrr_delta !== 0) {
+    const sign = r.nrr_delta > 0 ? "+" : "";
+    t += ` · News Beta ${sign}${r.nrr_delta.toFixed(2)} since last update`;
+  }
+  return t;
+}
+
+// Rank-movement badge vs the previous snapshot. Renders nothing for snapshots
+// built before movement tracking existed (fields simply absent).
+function Movement({ stock }) {
+  if (stock.is_new) {
+    return <span className="lb-move lb-move-new">NEW</span>;
+  }
+  if (typeof stock.rank_delta !== "number") {
+    return <span className="lb-move lb-move-flat" aria-hidden="true" />;
+  }
+  if (stock.rank_delta === 0) {
+    return (
+      <span className="lb-move lb-move-flat" title="No change">
+        –
+      </span>
+    );
+  }
+  const up = stock.rank_delta > 0;
+  return (
+    <span
+      className={`lb-move ${up ? "lb-move-up" : "lb-move-down"}`}
+      title={`${up ? "Up" : "Down"} ${Math.abs(stock.rank_delta)} since last update`}
+    >
+      {up ? "▲" : "▼"}
+      {Math.abs(stock.rank_delta)}
+    </span>
   );
 }

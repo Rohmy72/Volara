@@ -29,6 +29,12 @@ versus days it wasn't. That ratio is **News Beta**.
   | ~1.5 | Somewhat news-sensitive — news contributes but doesn't dominate |
   | >2.0 | News-driven — idiosyncratic volatility concentrates on news days |
 
+- **Which way it leans.** News Beta measures how *big* news-day moves are, not
+  whether they're gains or losses — so the verdict card also carries a
+  **directional read**: *Upside-skewed*, *Downside-skewed*, or *Two-sided*, with
+  the up/down day split and the average move in each direction. It's computed
+  from the *signed* abnormal returns, and it flags asymmetry too (e.g. a stock
+  that splits evenly but whose down reactions are twice the size of its up ones).
 - **Price chart, with news days marked.** The daily price line with news days
   flagged, so you can eyeball whether the spikes and the headlines line up.
 - **Buzzwords.** Headline terms that showed up disproportionately on the stock's
@@ -38,11 +44,19 @@ versus days it wasn't. That ratio is **News Beta**.
 
 ### The sidebar
 
-Two leaderboards, both served from a precomputed snapshot rather than calculated
-live (scoring the universe means running the full analysis on ~50 stocks):
+Two leaderboards, served from a snapshot (scoring the universe means running the
+full analysis on ~50 stocks, too slow to do per request). The snapshot isn't
+frozen, though: it **refreshes itself on a stale-while-revalidate basis** — when
+a request finds it older than `LEADERBOARD_MAX_AGE_HOURS` (default 12), the
+current board is served instantly while a rebuild runs in the background, so the
+rankings keep changing as the underlying betas do. No separate scheduled service
+is required.
 
 1. **News-driven leaderboard** — the tracked universe ranked from most to least
-   news-driven, filterable by sector. Click any row to run a full analysis on it.
+   news-driven, filterable by sector. Each row shows how it **moved since the
+   last snapshot** (▲/▼ rank change, or a `NEW` badge for fresh entrants), and a
+   "biggest mover" callout surfaces the largest shake-up at a glance. Click any
+   row to run a full analysis on it.
 2. **Trending buzzwords** — headline terms that lined up with the biggest
    idiosyncratic moves across the *whole* universe over the last week, month, or
    year.
@@ -63,7 +77,12 @@ The in-site **"What is News Beta?"** page walks through the full methodology.
    News Beta = average `|abnormal return|` on news days ÷ average
    `|abnormal return|` on quiet days. (It's called the News Reaction Ratio, or
    NRR, in the research code and in API field names.)
-4. **Extract buzzwords.** For each word in the news corpus, compare the average
+4. **Read the direction.** Steps 1–3 use `|abnormal return|`, which is
+   sign-blind. Re-reading the *signed* abnormal returns on news days gives the
+   up/down split, the average move in each direction, and the skew label shown
+   on the verdict card. Days moving less than 0.1% are ignored so flat sessions
+   don't tilt the result.
+5. **Extract buzzwords.** For each word in the news corpus, compare the average
    move size on days it appeared against the average across all news days. Words
    with high lift are candidate volatility drivers — but this is correlational
    (a word appearing alongside big moves), not a causal claim.
@@ -90,7 +109,9 @@ through the Vite dev proxy locally.
 Full analysis for one ticker. `period` accepts any yfinance period string
 (`3mo`, `6mo`, `1y`, `2y`). Returns:
 - `company_name` — the stock's full name, used for the verdict heading
-- `verdict` — News Beta, label, plain-English explanation, news/quiet day counts
+- `verdict` — News Beta, label, plain-English explanation, news/quiet day counts,
+  plus the directional read (`direction_label`, `news_day_up_share`,
+  `n_news_up_days` / `n_news_down_days`, `avg_up_move_pct` / `avg_down_move_pct`)
 - `price_series` — daily close, return, abnormal return, and whether news landed
 - `buzzwords` — ranked terms with their lift over baseline
 - `news` — the aggregated, de-duplicated article list

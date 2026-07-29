@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-07-14T21:59:10.323366+00:00",
+  "generated_at": "2026-07-29T03:15:02.692486+00:00",
   "market_benchmark": "SPY",
   "period": "1y",
-  "n_ranked": 50,
+  "n_ranked": 51,
   "sectors": [
     "Communication",
     "Consumer Discretionary",
@@ -18,65 +18,133 @@
       "ticker": "META",
       "name": "Meta Platforms",
       "sector": "Communication",
-      "nrr": 2.49,
+      "nrr": 2.4,
       "verdict_label": "News-driven",
-      "n_news_days": 22
-    },
-    {
-      "ticker": "QCOM",
-      "name": "Qualcomm",
-      "sector": "Technology",
-      "nrr": 2.25,
-      "verdict_label": "News-driven",
-      "n_news_days": 31
+      "n_news_days": 17,
+      "rank": 1,
+      "is_new": false,
+      "rank_delta": 0,
+      "nrr_delta": -0.09
     },
     {
       "ticker": "AMC",
       "name": "AMC Entertainment",
       "sector": "Speculative",
-      "nrr": 2.17,
+      "nrr": 2.39,
       "verdict_label": "News-driven",
-      "n_news_days": 43
+      "n_news_days": 39,
+      "rank": 2,
+      "is_new": false,
+      "rank_delta": 1,
+      "nrr_delta": 0.22
     },
     {
-      "ticker": "MSFT",
-      "name": "Microsoft",
+      "ticker": "IBM",
+      "name": "IBM",
       "sector": "Technology",
-      "nrr": 2.05,
+      "nrr": 2.38,
       "verdict_label": "News-driven",
-      "n_news_days": 30
+      "n_news_days": 14,
+      "rank": 3,
+      "is_new": true,
+      "rank_delta": null,
+      "nrr_delta": null
+    },
+    {
+      "ticker": "LCID",
+      "name": "Lucid",
+      "sector": "Speculative",
+      "nrr": 2.21,
+      "verdict_label": "News-driven",
+      "n_news_days": 35,
+      "rank": 4,
+      "is_new": false,
+      "rank_delta": 6,
+      "nrr_delta": 0.61
     },
     {
       "ticker": "CSCO",
       "name": "Cisco",
       "sector": "Technology",
-      "nrr": 1.82,
+      "nrr": 1.84,
       "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 45
+      "n_news_days": 37,
+      "rank": 5,
+      "is_new": false,
+      "rank_delta": 0,
+      "nrr_delta": 0.02
+    },
+    {
+      "ticker": "VZ",
+      "name": "Verizon",
+      "sector": "Communication",
+      "nrr": 1.75,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 31,
+      "rank": 6,
+      "is_new": false,
+      "rank_delta": 9,
+      "nrr_delta": 0.21
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "sector": "Technology",
+      "nrr": 1.73,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 41,
+      "rank": 7,
+      "is_new": false,
+      "rank_delta": -3,
+      "nrr_delta": -0.32
+    },
+    {
+      "ticker": "QCOM",
+      "name": "Qualcomm",
+      "sector": "Technology",
+      "nrr": 1.73,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 34,
+      "rank": 8,
+      "is_new": false,
+      "rank_delta": -6,
+      "nrr_delta": -0.52
     },
     {
       "ticker": "AAPL",
       "name": "Apple",
       "sector": "Technology",
-      "nrr": 1.74,
+      "nrr": 1.72,
       "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 26
+      "n_news_days": 25,
+      "rank": 9,
+      "is_new": false,
+      "rank_delta": -3,
+      "nrr_delta": -0.02
+    },
+    {
+      "ticker": "KO",
+      "name": "Coca-Cola",
+      "sector": "Consumer Staples",
+      "nrr": 1.71,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 25,
+      "rank": 10,
+      "is_new": false,
+      "rank_delta": 12,
+      "nrr_delta": 0.29
     },
     {
       "ticker": "RIVN",
       "name": "Rivian",
       "sector": "Speculative",
-      "nrr": 1.74,
+      "nrr": 1.67,
       "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 24
-    },
-    {
-      "ticker": "JNJ",
-      "name": "Johnson & Johnson",
-      "sector": "Healthcare",
-      "nrr": 1.71,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 28
+      "n_news_days": 28,
+      "rank": 11,
+      "is_new": false,
+      "rank_delta": -4,
+      "nrr_delta": -0.07
     },
     {
       "ticker": "GS",
@@ -84,941 +152,1078 @@
       "sector": "Financials",
       "nrr": 1.64,
       "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 31
-    },
-    {
-      "ticker": "LCID",
-      "name": "Lucid",
-      "sector": "Speculative",
-      "nrr": 1.6,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 40
-    },
-    {
-      "ticker": "RBLX",
-      "name": "Roblox",
-      "sector": "Speculative",
-      "nrr": 1.59,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 41
-    },
-    {
-      "ticker": "NVDA",
-      "name": "NVIDIA",
-      "sector": "Technology",
-      "nrr": 1.57,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 19
-    },
-    {
-      "ticker": "AMZN",
-      "name": "Amazon",
-      "sector": "Consumer Discretionary",
-      "nrr": 1.57,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 27
-    },
-    {
-      "ticker": "MA",
-      "name": "Mastercard",
-      "sector": "Financials",
-      "nrr": 1.55,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 43
-    },
-    {
-      "ticker": "VZ",
-      "name": "Verizon",
-      "sector": "Communication",
-      "nrr": 1.54,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 33
-    },
-    {
-      "ticker": "MCD",
-      "name": "McDonald's",
-      "sector": "Consumer Discretionary",
-      "nrr": 1.54,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 52
-    },
-    {
-      "ticker": "WFC",
-      "name": "Wells Fargo",
-      "sector": "Financials",
-      "nrr": 1.53,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 40
-    },
-    {
-      "ticker": "HOOD",
-      "name": "Robinhood",
-      "sector": "Speculative",
-      "nrr": 1.53,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 52
-    },
-    {
-      "ticker": "DIS",
-      "name": "Disney",
-      "sector": "Communication",
-      "nrr": 1.51,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 45
-    },
-    {
-      "ticker": "INTC",
-      "name": "Intel",
-      "sector": "Technology",
-      "nrr": 1.49,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 29
-    },
-    {
-      "ticker": "WMT",
-      "name": "Walmart",
-      "sector": "Consumer Staples",
-      "nrr": 1.49,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 35
-    },
-    {
-      "ticker": "KO",
-      "name": "Coca-Cola",
-      "sector": "Consumer Staples",
-      "nrr": 1.42,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 36
-    },
-    {
-      "ticker": "CRM",
-      "name": "Salesforce",
-      "sector": "Technology",
-      "nrr": 1.41,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 30
-    },
-    {
-      "ticker": "PG",
-      "name": "Procter & Gamble",
-      "sector": "Consumer Staples",
-      "nrr": 1.4,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 45
-    },
-    {
-      "ticker": "JPM",
-      "name": "JPMorgan Chase",
-      "sector": "Financials",
-      "nrr": 1.38,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 35
-    },
-    {
-      "ticker": "TSLA",
-      "name": "Tesla",
-      "sector": "Consumer Discretionary",
-      "nrr": 1.37,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 42
-    },
-    {
-      "ticker": "T",
-      "name": "AT&T",
-      "sector": "Communication",
-      "nrr": 1.37,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 38
-    },
-    {
-      "ticker": "NKE",
-      "name": "Nike",
-      "sector": "Consumer Discretionary",
-      "nrr": 1.36,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 41
-    },
-    {
-      "ticker": "V",
-      "name": "Visa",
-      "sector": "Financials",
-      "nrr": 1.36,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 56
-    },
-    {
-      "ticker": "MRK",
-      "name": "Merck",
-      "sector": "Healthcare",
-      "nrr": 1.36,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 64
-    },
-    {
-      "ticker": "GME",
-      "name": "GameStop",
-      "sector": "Speculative",
-      "nrr": 1.36,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 55
-    },
-    {
-      "ticker": "COST",
-      "name": "Costco",
-      "sector": "Consumer Staples",
-      "nrr": 1.31,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 40
-    },
-    {
-      "ticker": "SOFI",
-      "name": "SoFi",
-      "sector": "Speculative",
-      "nrr": 1.31,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 26
+      "n_news_days": 38,
+      "rank": 12,
+      "is_new": false,
+      "rank_delta": -3,
+      "nrr_delta": 0.0
     },
     {
       "ticker": "NFLX",
       "name": "Netflix",
       "sector": "Communication",
-      "nrr": 1.29,
+      "nrr": 1.62,
       "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 37
+      "n_news_days": 34,
+      "rank": 13,
+      "is_new": false,
+      "rank_delta": 21,
+      "nrr_delta": 0.33
     },
     {
-      "ticker": "ABBV",
-      "name": "AbbVie",
-      "sector": "Healthcare",
-      "nrr": 1.29,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 49
-    },
-    {
-      "ticker": "PEP",
-      "name": "PepsiCo",
-      "sector": "Consumer Staples",
-      "nrr": 1.27,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 25
-    },
-    {
-      "ticker": "ORCL",
-      "name": "Oracle",
-      "sector": "Technology",
-      "nrr": 1.25,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 33
-    },
-    {
-      "ticker": "COIN",
-      "name": "Coinbase",
-      "sector": "Speculative",
-      "nrr": 1.25,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 45
-    },
-    {
-      "ticker": "MSTR",
-      "name": "MicroStrategy",
-      "sector": "Speculative",
-      "nrr": 1.21,
-      "verdict_label": "Somewhat news-sensitive",
-      "n_news_days": 56
-    },
-    {
-      "ticker": "HD",
-      "name": "Home Depot",
+      "ticker": "MCD",
+      "name": "McDonald's",
       "sector": "Consumer Discretionary",
-      "nrr": 1.2,
-      "verdict_label": "Not particularly news-driven",
-      "n_news_days": 43
-    },
-    {
-      "ticker": "BAC",
-      "name": "Bank of America",
-      "sector": "Financials",
-      "nrr": 1.2,
-      "verdict_label": "Not particularly news-driven",
-      "n_news_days": 32
-    },
-    {
-      "ticker": "COP",
-      "name": "ConocoPhillips",
-      "sector": "Energy",
-      "nrr": 1.19,
-      "verdict_label": "Not particularly news-driven",
-      "n_news_days": 58
+      "nrr": 1.6,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 51,
+      "rank": 14,
+      "is_new": false,
+      "rank_delta": 2,
+      "nrr_delta": 0.06
     },
     {
       "ticker": "GOOGL",
       "name": "Alphabet",
       "sector": "Communication",
-      "nrr": 1.18,
-      "verdict_label": "Not particularly news-driven",
-      "n_news_days": 34
+      "nrr": 1.59,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 26,
+      "rank": 15,
+      "is_new": false,
+      "rank_delta": 28,
+      "nrr_delta": 0.41
     },
     {
-      "ticker": "XOM",
-      "name": "ExxonMobil",
-      "sector": "Energy",
-      "nrr": 1.18,
-      "verdict_label": "Not particularly news-driven",
-      "n_news_days": 34
+      "ticker": "WFC",
+      "name": "Wells Fargo",
+      "sector": "Financials",
+      "nrr": 1.55,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 51,
+      "rank": 16,
+      "is_new": false,
+      "rank_delta": 1,
+      "nrr_delta": 0.02
     },
     {
-      "ticker": "PLTR",
-      "name": "Palantir",
+      "ticker": "INTC",
+      "name": "Intel",
+      "sector": "Technology",
+      "nrr": 1.52,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 19,
+      "rank": 17,
+      "is_new": false,
+      "rank_delta": 3,
+      "nrr_delta": 0.03
+    },
+    {
+      "ticker": "RBLX",
+      "name": "Roblox",
       "sector": "Speculative",
-      "nrr": 1.15,
-      "verdict_label": "Not particularly news-driven",
-      "n_news_days": 30
+      "nrr": 1.52,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 46,
+      "rank": 18,
+      "is_new": false,
+      "rank_delta": -7,
+      "nrr_delta": -0.07
+    },
+    {
+      "ticker": "JNJ",
+      "name": "Johnson & Johnson",
+      "sector": "Healthcare",
+      "nrr": 1.51,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 46,
+      "rank": 19,
+      "is_new": false,
+      "rank_delta": -11,
+      "nrr_delta": -0.2
+    },
+    {
+      "ticker": "HOOD",
+      "name": "Robinhood",
+      "sector": "Speculative",
+      "nrr": 1.47,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 45,
+      "rank": 20,
+      "is_new": false,
+      "rank_delta": -2,
+      "nrr_delta": -0.06
+    },
+    {
+      "ticker": "DIS",
+      "name": "Disney",
+      "sector": "Communication",
+      "nrr": 1.46,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 56,
+      "rank": 21,
+      "is_new": false,
+      "rank_delta": -2,
+      "nrr_delta": -0.05
+    },
+    {
+      "ticker": "T",
+      "name": "AT&T",
+      "sector": "Communication",
+      "nrr": 1.44,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 28,
+      "rank": 22,
+      "is_new": false,
+      "rank_delta": 5,
+      "nrr_delta": 0.07
+    },
+    {
+      "ticker": "NKE",
+      "name": "Nike",
+      "sector": "Consumer Discretionary",
+      "nrr": 1.42,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 49,
+      "rank": 23,
+      "is_new": false,
+      "rank_delta": 5,
+      "nrr_delta": 0.06
+    },
+    {
+      "ticker": "MA",
+      "name": "Mastercard",
+      "sector": "Financials",
+      "nrr": 1.42,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 40,
+      "rank": 24,
+      "is_new": false,
+      "rank_delta": -10,
+      "nrr_delta": -0.13
+    },
+    {
+      "ticker": "PEP",
+      "name": "PepsiCo",
+      "sector": "Consumer Staples",
+      "nrr": 1.38,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 45,
+      "rank": 25,
+      "is_new": false,
+      "rank_delta": 11,
+      "nrr_delta": 0.11
+    },
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "sector": "Technology",
+      "nrr": 1.36,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 24,
+      "rank": 26,
+      "is_new": false,
+      "rank_delta": -14,
+      "nrr_delta": -0.21
+    },
+    {
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "sector": "Technology",
+      "nrr": 1.35,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 38,
+      "rank": 27,
+      "is_new": false,
+      "rank_delta": -4,
+      "nrr_delta": -0.06
+    },
+    {
+      "ticker": "WMT",
+      "name": "Walmart",
+      "sector": "Consumer Staples",
+      "nrr": 1.35,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 41,
+      "rank": 28,
+      "is_new": false,
+      "rank_delta": -7,
+      "nrr_delta": -0.14
+    },
+    {
+      "ticker": "GME",
+      "name": "GameStop",
+      "sector": "Speculative",
+      "nrr": 1.35,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 60,
+      "rank": 29,
+      "is_new": false,
+      "rank_delta": 2,
+      "nrr_delta": -0.01
+    },
+    {
+      "ticker": "PG",
+      "name": "Procter & Gamble",
+      "sector": "Consumer Staples",
+      "nrr": 1.33,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 48,
+      "rank": 30,
+      "is_new": false,
+      "rank_delta": -6,
+      "nrr_delta": -0.07
+    },
+    {
+      "ticker": "V",
+      "name": "Visa",
+      "sector": "Financials",
+      "nrr": 1.33,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 41,
+      "rank": 31,
+      "is_new": false,
+      "rank_delta": -2,
+      "nrr_delta": -0.03
     },
     {
       "ticker": "AMD",
       "name": "Advanced Micro Devices",
       "sector": "Technology",
-      "nrr": 1.13,
-      "verdict_label": "Not particularly news-driven",
-      "n_news_days": 23
+      "nrr": 1.31,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 18,
+      "rank": 32,
+      "is_new": false,
+      "rank_delta": 14,
+      "nrr_delta": 0.18
     },
     {
-      "ticker": "PFE",
-      "name": "Pfizer",
+      "ticker": "MSTR",
+      "name": "MicroStrategy",
+      "sector": "Speculative",
+      "nrr": 1.3,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 75,
+      "rank": 33,
+      "is_new": false,
+      "rank_delta": 6,
+      "nrr_delta": 0.09
+    },
+    {
+      "ticker": "JPM",
+      "name": "JPMorgan Chase",
+      "sector": "Financials",
+      "nrr": 1.29,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 33,
+      "rank": 34,
+      "is_new": false,
+      "rank_delta": -9,
+      "nrr_delta": -0.09
+    },
+    {
+      "ticker": "COP",
+      "name": "ConocoPhillips",
+      "sector": "Energy",
+      "nrr": 1.29,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 60,
+      "rank": 35,
+      "is_new": false,
+      "rank_delta": 7,
+      "nrr_delta": 0.1
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "sector": "Consumer Discretionary",
+      "nrr": 1.28,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 43,
+      "rank": 36,
+      "is_new": false,
+      "rank_delta": -23,
+      "nrr_delta": -0.29
+    },
+    {
+      "ticker": "COST",
+      "name": "Costco",
+      "sector": "Consumer Staples",
+      "nrr": 1.28,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 52,
+      "rank": 37,
+      "is_new": false,
+      "rank_delta": -5,
+      "nrr_delta": -0.03
+    },
+    {
+      "ticker": "XOM",
+      "name": "ExxonMobil",
+      "sector": "Energy",
+      "nrr": 1.27,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 49,
+      "rank": 38,
+      "is_new": false,
+      "rank_delta": 6,
+      "nrr_delta": 0.09
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla",
+      "sector": "Consumer Discretionary",
+      "nrr": 1.26,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 26,
+      "rank": 39,
+      "is_new": false,
+      "rank_delta": -13,
+      "nrr_delta": -0.11
+    },
+    {
+      "ticker": "ABBV",
+      "name": "AbbVie",
       "sector": "Healthcare",
-      "nrr": 1.12,
+      "nrr": 1.26,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 51,
+      "rank": 40,
+      "is_new": false,
+      "rank_delta": -5,
+      "nrr_delta": -0.03
+    },
+    {
+      "ticker": "SOFI",
+      "name": "SoFi",
+      "sector": "Speculative",
+      "nrr": 1.22,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 33,
+      "rank": 41,
+      "is_new": false,
+      "rank_delta": -8,
+      "nrr_delta": -0.09
+    },
+    {
+      "ticker": "HD",
+      "name": "Home Depot",
+      "sector": "Consumer Discretionary",
+      "nrr": 1.21,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 60,
+      "rank": 42,
+      "is_new": false,
+      "rank_delta": -2,
+      "nrr_delta": 0.01
+    },
+    {
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "sector": "Speculative",
+      "nrr": 1.21,
+      "verdict_label": "Somewhat news-sensitive",
+      "n_news_days": 48,
+      "rank": 43,
+      "is_new": false,
+      "rank_delta": -5,
+      "nrr_delta": -0.04
+    },
+    {
+      "ticker": "ORCL",
+      "name": "Oracle",
+      "sector": "Technology",
+      "nrr": 1.16,
       "verdict_label": "Not particularly news-driven",
-      "n_news_days": 47
+      "n_news_days": 40,
+      "rank": 44,
+      "is_new": false,
+      "rank_delta": -7,
+      "nrr_delta": -0.09
+    },
+    {
+      "ticker": "MRK",
+      "name": "Merck",
+      "sector": "Healthcare",
+      "nrr": 1.15,
+      "verdict_label": "Not particularly news-driven",
+      "n_news_days": 62,
+      "rank": 45,
+      "is_new": false,
+      "rank_delta": -15,
+      "nrr_delta": -0.21
     },
     {
       "ticker": "CVX",
       "name": "Chevron",
       "sector": "Energy",
-      "nrr": 1.1,
+      "nrr": 1.13,
       "verdict_label": "Not particularly news-driven",
-      "n_news_days": 38
+      "n_news_days": 49,
+      "rank": 46,
+      "is_new": false,
+      "rank_delta": 2,
+      "nrr_delta": 0.03
     },
     {
-      "ticker": "UNH",
-      "name": "UnitedHealth",
+      "ticker": "PFE",
+      "name": "Pfizer",
       "sector": "Healthcare",
-      "nrr": 1.04,
+      "nrr": 1.1,
       "verdict_label": "Not particularly news-driven",
-      "n_news_days": 41
+      "n_news_days": 66,
+      "rank": 47,
+      "is_new": false,
+      "rank_delta": 0,
+      "nrr_delta": -0.02
+    },
+    {
+      "ticker": "BAC",
+      "name": "Bank of America",
+      "sector": "Financials",
+      "nrr": 1.03,
+      "verdict_label": "Not particularly news-driven",
+      "n_news_days": 43,
+      "rank": 48,
+      "is_new": false,
+      "rank_delta": -7,
+      "nrr_delta": -0.17
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "sector": "Speculative",
+      "nrr": 0.97,
+      "verdict_label": "Not particularly news-driven",
+      "n_news_days": 37,
+      "rank": 49,
+      "is_new": false,
+      "rank_delta": -4,
+      "nrr_delta": -0.18
     },
     {
       "ticker": "SBUX",
       "name": "Starbucks",
       "sector": "Consumer Discretionary",
-      "nrr": 1.02,
+      "nrr": 0.95,
       "verdict_label": "Not particularly news-driven",
-      "n_news_days": 40
+      "n_news_days": 43,
+      "rank": 50,
+      "is_new": false,
+      "rank_delta": 0,
+      "nrr_delta": -0.07
+    },
+    {
+      "ticker": "UNH",
+      "name": "UnitedHealth",
+      "sector": "Healthcare",
+      "nrr": 0.94,
+      "verdict_label": "Not particularly news-driven",
+      "n_news_days": 41,
+      "rank": 51,
+      "is_new": false,
+      "rank_delta": -2,
+      "nrr_delta": -0.1
     }
   ],
   "buzzwords": {
     "week": [
       {
-        "word": "plummet",
-        "lift": 7.76,
+        "word": "owns",
+        "lift": 4.81,
         "occurrences": 2,
-        "avg_move_pct": 20.83,
+        "avg_move_pct": 11.79,
         "tickers": [
-          "IBM",
+          "LCID",
+          "MSFT"
+        ],
+        "example_headline": "Why Is LCID Stock Soaring 23% Today?"
+      },
+      {
+        "word": "reminds",
+        "lift": 4.81,
+        "occurrences": 2,
+        "avg_move_pct": 11.79,
+        "tickers": [
+          "LCID",
+          "MSFT"
+        ],
+        "example_headline": "CLASS ACTION DEADLINE TONIGHT: Faruqi & Faruqi, LLP Reminds Lucid Group (LCID) Investors of Securities Class Action Lawsuit Deadline on July 28, 2026 - Business Wire"
+      },
+      {
+        "word": "rumors",
+        "lift": 4.74,
+        "occurrences": 2,
+        "avg_move_pct": 11.63,
+        "tickers": [
           "LCID"
         ],
-        "example_headline": "Gartner and DXC Shares Plummet, What You Need To Know"
+        "example_headline": "Saudi Prince Alwaleed Takes 5% Stake in EV-Maker Lucid"
       },
       {
-        "word": "tug-of-war",
-        "lift": 6.29,
+        "word": "commission",
+        "lift": 4.59,
         "occurrences": 2,
-        "avg_move_pct": 16.88,
+        "avg_move_pct": 11.27,
         "tickers": [
-          "GS",
-          "IBM"
+          "LCID",
+          "V"
         ],
-        "example_headline": "Big Banks Lift, IBM Drags, and the Dow Flatlines"
+        "example_headline": "Why Is LCID Stock Soaring 23% Today?"
       },
       {
-        "word": "jumpstarting",
-        "lift": 6.29,
+        "word": "insane",
+        "lift": 4.54,
         "occurrences": 2,
-        "avg_move_pct": 16.88,
+        "avg_move_pct": 11.12,
         "tickers": [
-          "GS",
-          "IBM"
-        ],
-        "example_headline": "Big Banks Lift, IBM Drags, and the Dow Flatlines"
-      },
-      {
-        "word": "flatlines",
-        "lift": 6.29,
-        "occurrences": 2,
-        "avg_move_pct": 16.88,
-        "tickers": [
-          "GS",
-          "IBM"
-        ],
-        "example_headline": "Big Banks Lift, IBM Drags, and the Dow Flatlines"
-      },
-      {
-        "word": "flatline",
-        "lift": 6.29,
-        "occurrences": 2,
-        "avg_move_pct": 16.88,
-        "tickers": [
-          "GS",
-          "IBM"
-        ],
-        "example_headline": "Big Banks Lift, IBM Drags, and the Dow Flatlines"
-      },
-      {
-        "word": "mlq",
-        "lift": 6.29,
-        "occurrences": 2,
-        "avg_move_pct": 16.88,
-        "tickers": [
-          "GS",
-          "IBM"
-        ],
-        "example_headline": "IBM Stock Plunges 25% After Rare Q2 Earnings Warning, Worst Day Since 1987 - MLQ.ai"
-      },
-      {
-        "word": "averages",
-        "lift": 6.03,
-        "occurrences": 2,
-        "avg_move_pct": 16.2,
-        "tickers": [
-          "IBM",
+          "LCID",
           "RIVN"
         ],
-        "example_headline": "IBM tumbles more than 20% as RSI signals oversold and multiple moving averages are broken - Seeking Alpha"
+        "example_headline": "Is This Wall Street Bank Insane to Believe Tesla Will Nearly Double From Current Prices? Maybe Not."
       },
       {
-        "word": "crashed",
-        "lift": 5.55,
-        "occurrences": 3,
-        "avg_move_pct": 14.91,
+        "word": "audacity",
+        "lift": 4.54,
+        "occurrences": 2,
+        "avg_move_pct": 11.12,
         "tickers": [
-          "IBM",
           "LCID",
-          "ORCL"
+          "RIVN"
         ],
-        "example_headline": "IBM is on pace for its worst day ever - CNN"
+        "example_headline": "Is This Wall Street Bank Insane to Believe Tesla Will Nearly Double From Current Prices? Maybe Not."
       },
       {
-        "word": "rush",
-        "lift": 5.48,
+        "word": "slapped",
+        "lift": 4.54,
         "occurrences": 2,
-        "avg_move_pct": 14.71,
+        "avg_move_pct": 11.12,
         "tickers": [
-          "IBM",
-          "PLTR"
+          "LCID",
+          "RIVN"
         ],
-        "example_headline": "IBM shares plunge 25% as AI spending boom disrupts business"
+        "example_headline": "Is This Wall Street Bank Insane to Believe Tesla Will Nearly Double From Current Prices? Maybe Not."
       },
       {
-        "word": "synthetic",
-        "lift": 5.39,
+        "word": "crater",
+        "lift": 4.54,
         "occurrences": 2,
-        "avg_move_pct": 14.48,
+        "avg_move_pct": 11.12,
         "tickers": [
-          "IBM",
-          "XOM"
+          "LCID",
+          "RIVN"
         ],
-        "example_headline": "IBM is on pace for its worst day ever - CNN"
+        "example_headline": "Is This Wall Street Bank Insane to Believe Tesla Will Nearly Double From Current Prices? Maybe Not."
       },
       {
-        "word": "knowledge",
-        "lift": 5.37,
+        "word": "maybe",
+        "lift": 4.54,
         "occurrences": 2,
-        "avg_move_pct": 14.42,
+        "avg_move_pct": 11.12,
         "tickers": [
-          "IBM",
-          "NVDA"
+          "LCID",
+          "RIVN"
         ],
-        "example_headline": "IBM Shares Plunge as Software Deals Take Back Seat in AI Race - Data Center Knowledge"
+        "example_headline": "Is This Wall Street Bank Insane to Believe Tesla Will Nearly Double From Current Prices? Maybe Not."
       },
       {
-        "word": "graphics",
-        "lift": 5.37,
+        "word": "plot",
+        "lift": 4.54,
         "occurrences": 2,
-        "avg_move_pct": 14.42,
+        "avg_move_pct": 11.12,
         "tickers": [
-          "IBM",
-          "NVDA"
+          "LCID",
+          "RIVN"
         ],
-        "example_headline": "Nvidia (NVDA) Stock Trades Up, Here Is Why"
+        "example_headline": "Is This Wall Street Bank Insane to Believe Tesla Will Nearly Double From Current Prices? Maybe Not."
       },
       {
-        "word": "storage",
-        "lift": 5.31,
+        "word": "impatient",
+        "lift": 4.54,
         "occurrences": 2,
-        "avg_move_pct": 14.25,
+        "avg_move_pct": 11.12,
         "tickers": [
-          "COP",
-          "IBM"
+          "LCID",
+          "RIVN"
         ],
-        "example_headline": "IBM shares plunge 25% as AI spending boom disrupts business"
+        "example_headline": "Is This Wall Street Bank Insane to Believe Tesla Will Nearly Double From Current Prices? Maybe Not."
       },
       {
-        "word": "unexpected",
-        "lift": 5.3,
+        "word": "finish",
+        "lift": 4.51,
         "occurrences": 2,
-        "avg_move_pct": 14.22,
+        "avg_move_pct": 11.05,
         "tickers": [
-          "IBM",
+          "AAPL",
+          "LCID"
+        ],
+        "example_headline": "Lucid Group (LCID) Soars 21% as Saudi Prince Backing Eases Financial Health Worries"
+      },
+      {
+        "word": "wire",
+        "lift": 4.51,
+        "occurrences": 2,
+        "avg_move_pct": 11.07,
+        "tickers": [
+          "LCID",
+          "WFC"
+        ],
+        "example_headline": "CLASS ACTION DEADLINE TONIGHT: Faruqi & Faruqi, LLP Reminds Lucid Group (LCID) Investors of Securities Class Action Lawsuit Deadline on July 28, 2026 - Business Wire"
+      },
+      {
+        "word": "hikeasml",
+        "lift": 4.4,
+        "occurrences": 2,
+        "avg_move_pct": 10.8,
+        "tickers": [
+          "JPM",
+          "LCID"
+        ],
+        "example_headline": "Saudi Prince Alwaleed Takes 5% Stake in EV-Maker Lucid"
+      },
+      {
+        "word": "apiece",
+        "lift": 3.9,
+        "occurrences": 3,
+        "avg_move_pct": 9.57,
+        "tickers": [
+          "AMC",
+          "LCID",
+          "T"
+        ],
+        "example_headline": "Lucid Group (LCID) Soars 21% as Saudi Prince Backing Eases Financial Health Worries"
+      },
+      {
+        "word": "spdr",
+        "lift": 3.63,
+        "occurrences": 3,
+        "avg_move_pct": 8.91,
+        "tickers": [
+          "KO",
+          "LCID",
+          "META"
+        ],
+        "example_headline": "Sector Update: Consumer Stocks Rise Tuesday Afternoon"
+      },
+      {
+        "word": "discloses",
+        "lift": 3.58,
+        "occurrences": 4,
+        "avg_move_pct": 8.77,
+        "tickers": [
+          "AMC",
+          "GS",
+          "LCID",
+          "WMT"
+        ],
+        "example_headline": "HRH Prince Alwaleed discloses 5% Lucid Group (LCID) ownership with 19.5M shares - Stock Titan"
+      },
+      {
+        "word": "cpu",
+        "lift": 3.37,
+        "occurrences": 3,
+        "avg_move_pct": 8.28,
+        "tickers": [
+          "AMD",
           "INTC"
         ],
-        "example_headline": "IBM stock crashes after major warning \u2014 here's what Wall Street is doing next"
-      },
-      {
-        "word": "guardian",
-        "lift": 5.3,
-        "occurrences": 2,
-        "avg_move_pct": 14.22,
-        "tickers": [
-          "IBM",
-          "INTC"
-        ],
-        "example_headline": "IBM loses quarter of its value as tech giant\u2019s shares plunge and profits falter - The Guardian"
-      },
-      {
-        "word": "comments",
-        "lift": 5.26,
-        "occurrences": 2,
-        "avg_move_pct": 14.13,
-        "tickers": [
-          "CVX",
-          "IBM"
-        ],
-        "example_headline": "Cybersecurity stocks rally on AI spending change comments from IBM's Krishna - CNBC"
-      },
-      {
-        "word": "crwd",
-        "lift": 5.17,
-        "occurrences": 2,
-        "avg_move_pct": 13.88,
-        "tickers": [
-          "CSCO",
-          "IBM"
-        ],
-        "example_headline": "CRWD, PANW, ZS, OKTA In Focus \u2014 Cybersecurity Stocks Get Boost As IBM CEO Flags Rising Concerns - Yahoo Finance"
-      },
-      {
-        "word": "dot-com",
-        "lift": 5.17,
-        "occurrences": 2,
-        "avg_move_pct": 13.88,
-        "tickers": [
-          "CSCO",
-          "IBM"
-        ],
-        "example_headline": "Worse than the Dot-com bubble: IBM stock crash - XTB.com"
+        "example_headline": "Advanced Micro Devices (AMD) Surged on an Agentic AI-Driven Server CPU Renaissance - Yahoo Finance UK"
       }
     ],
     "month": [
       {
-        "word": "plummet",
-        "lift": 7.59,
+        "word": "denies",
+        "lift": 8.56,
         "occurrences": 2,
-        "avg_move_pct": 20.83,
+        "avg_move_pct": 22.43,
         "tickers": [
-          "IBM",
           "LCID"
         ],
-        "example_headline": "Gartner and DXC Shares Plummet, What You Need To Know"
+        "example_headline": "Lucid Stock Rebounds After EV Maker Denies Bankruptcy Report: 'Completely False' - Benzinga"
       },
       {
-        "word": "tug-of-war",
-        "lift": 6.15,
-        "occurrences": 2,
-        "avg_move_pct": 16.88,
-        "tickers": [
-          "GS",
-          "IBM"
-        ],
-        "example_headline": "Big Banks Lift, IBM Drags, and the Dow Flatlines"
-      },
-      {
-        "word": "jumpstarting",
-        "lift": 6.15,
-        "occurrences": 2,
-        "avg_move_pct": 16.88,
-        "tickers": [
-          "GS",
-          "IBM"
-        ],
-        "example_headline": "Big Banks Lift, IBM Drags, and the Dow Flatlines"
-      },
-      {
-        "word": "flatlines",
-        "lift": 6.15,
-        "occurrences": 2,
-        "avg_move_pct": 16.88,
-        "tickers": [
-          "GS",
-          "IBM"
-        ],
-        "example_headline": "Big Banks Lift, IBM Drags, and the Dow Flatlines"
-      },
-      {
-        "word": "flatline",
-        "lift": 6.15,
-        "occurrences": 2,
-        "avg_move_pct": 16.88,
-        "tickers": [
-          "GS",
-          "IBM"
-        ],
-        "example_headline": "Big Banks Lift, IBM Drags, and the Dow Flatlines"
-      },
-      {
-        "word": "mlq",
-        "lift": 6.15,
-        "occurrences": 2,
-        "avg_move_pct": 16.88,
-        "tickers": [
-          "GS",
-          "IBM"
-        ],
-        "example_headline": "IBM Stock Plunges 25% After Rare Q2 Earnings Warning, Worst Day Since 1987 - MLQ.ai"
-      },
-      {
-        "word": "averages",
-        "lift": 5.9,
-        "occurrences": 2,
-        "avg_move_pct": 16.2,
-        "tickers": [
-          "IBM",
-          "RIVN"
-        ],
-        "example_headline": "IBM tumbles more than 20% as RSI signals oversold and multiple moving averages are broken - Seeking Alpha"
-      },
-      {
-        "word": "squeezing",
-        "lift": 5.39,
-        "occurrences": 2,
-        "avg_move_pct": 14.79,
-        "tickers": [
-          "IBM",
-          "MCD"
-        ],
-        "example_headline": "IBM warns AI boom squeezing software budgets; shares sink in sector rout - Yahoo Finance"
-      },
-      {
-        "word": "synthetic",
-        "lift": 5.28,
-        "occurrences": 2,
-        "avg_move_pct": 14.48,
-        "tickers": [
-          "IBM",
-          "XOM"
-        ],
-        "example_headline": "IBM is on pace for its worst day ever - CNN"
-      },
-      {
-        "word": "tanks",
-        "lift": 5.27,
-        "occurrences": 4,
-        "avg_move_pct": 14.45,
+        "word": "bounces",
+        "lift": 7.69,
+        "occurrences": 3,
+        "avg_move_pct": 20.15,
         "tickers": [
           "AMC",
-          "GS",
-          "IBM",
-          "JPM"
+          "KO",
+          "LCID"
         ],
-        "example_headline": "Stock Market Today: Nasdaq Leads The Day; Yum Brands Falls On Report Of Taco Bell Investigation (Live Coverage)"
+        "example_headline": "Lucid Stock Bounces Back After Strongly Refuting Bankruptcy Rumors - The Motley Fool"
       },
       {
-        "word": "knowledge",
-        "lift": 5.26,
-        "occurrences": 2,
-        "avg_move_pct": 14.42,
+        "word": "electrek",
+        "lift": 7.01,
+        "occurrences": 3,
+        "avg_move_pct": 18.38,
         "tickers": [
-          "IBM",
-          "NVDA"
+          "LCID",
+          "RIVN"
         ],
-        "example_headline": "IBM Shares Plunge as Software Deals Take Back Seat in AI Race - Data Center Knowledge"
+        "example_headline": "Saudi Prince Alwaleed takes 5% Lucid (LCID) stake, stock jumps 25% - Electrek"
       },
       {
-        "word": "graphics",
-        "lift": 5.26,
-        "occurrences": 2,
-        "avg_move_pct": 14.42,
+        "word": "axios",
+        "lift": 6.97,
+        "occurrences": 3,
+        "avg_move_pct": 18.27,
         "tickers": [
-          "IBM",
-          "NVDA"
+          "AMC",
+          "DIS",
+          "IBM"
         ],
-        "example_headline": "Nvidia (NVDA) Stock Trades Up, Here Is Why"
+        "example_headline": "\"The Odyssey\" delivers blockbuster results for AMC - Axios"
+      },
+      {
+        "word": "viewing",
+        "lift": 6.68,
+        "occurrences": 2,
+        "avg_move_pct": 17.5,
+        "tickers": [
+          "AMC",
+          "MSTR"
+        ],
+        "example_headline": "AMC Stock Soars on Q2 Results: CEO Says \u2018I Think We\u2019ve Won That Fight\u2019 Against At\u2011Home Viewing - Benzinga"
       },
       {
         "word": "guardian",
-        "lift": 5.18,
+        "lift": 6.21,
         "occurrences": 2,
-        "avg_move_pct": 14.22,
-        "tickers": [
-          "IBM",
-          "INTC"
-        ],
-        "example_headline": "IBM loses quarter of its value as tech giant\u2019s shares plunge and profits falter - The Guardian"
-      },
-      {
-        "word": "comments",
-        "lift": 5.15,
-        "occurrences": 2,
-        "avg_move_pct": 14.13,
-        "tickers": [
-          "CVX",
-          "IBM"
-        ],
-        "example_headline": "Cybersecurity stocks rally on AI spending change comments from IBM's Krishna - CNBC"
-      },
-      {
-        "word": "issuing",
-        "lift": 5.14,
-        "occurrences": 2,
-        "avg_move_pct": 14.1,
-        "tickers": [
-          "IBM",
-          "TSLA"
-        ],
-        "example_headline": "IBM stock craters 23% after issuing second-quarter earnings warning - CNBC"
-      },
-      {
-        "word": "crwd",
-        "lift": 5.06,
-        "occurrences": 2,
-        "avg_move_pct": 13.88,
-        "tickers": [
-          "CSCO",
-          "IBM"
-        ],
-        "example_headline": "CRWD, PANW, ZS, OKTA In Focus \u2014 Cybersecurity Stocks Get Boost As IBM CEO Flags Rising Concerns - Yahoo Finance"
-      },
-      {
-        "word": "caused",
-        "lift": 5.06,
-        "occurrences": 2,
-        "avg_move_pct": 13.87,
+        "avg_move_pct": 16.29,
         "tickers": [
           "IBM",
           "PLTR"
         ],
-        "example_headline": "The Detail in IBM\u2019s Earnings Warning That Caused The Stock\u2019s Worst Day Ever"
+        "example_headline": "IBM loses quarter of its value as tech giant\u2019s shares plunge and profits falter - The Guardian"
       },
       {
-        "word": "appeared",
-        "lift": 5.02,
+        "word": "rattling",
+        "lift": 6.19,
         "occurrences": 2,
-        "avg_move_pct": 13.76,
+        "avg_move_pct": 16.23,
         "tickers": [
-          "CRM",
+          "IBM",
+          "INTC"
+        ],
+        "example_headline": "IBM Tumbles 22% Toward Its Worst Day Since 1987, Rattling Software Stocks - 24/7 Wall St."
+      },
+      {
+        "word": "rumors",
+        "lift": 5.98,
+        "occurrences": 5,
+        "avg_move_pct": 15.67,
+        "tickers": [
+          "LCID"
+        ],
+        "example_headline": "Lucid (LCID) Denies Bankruptcy Rumors While Reshaping Leadership And Operations - Yahoo Finance"
+      },
+      {
+        "word": "failed",
+        "lift": 5.95,
+        "occurrences": 2,
+        "avg_move_pct": 15.6,
+        "tickers": [
+          "IBM",
+          "PLTR"
+        ],
+        "example_headline": "IBM Stock Tanks To 2-Month Lows In Pre-Market \u2013 CEO Says Company \u2018Faltered\u2019 In Q2 As \u2018Large Deals Failed To Close\u2019 On Expected Timelines - Yahoo Finance"
+      },
+      {
+        "word": "slams",
+        "lift": 5.85,
+        "occurrences": 2,
+        "avg_move_pct": 15.34,
+        "tickers": [
+          "LCID",
+          "PFE"
+        ],
+        "example_headline": "LCID Stock Alert: What to Know as Lucid Slams 'Completely False' Bankruptcy Rumors - Barchart.com"
+      },
+      {
+        "word": "hollywood",
+        "lift": 5.82,
+        "occurrences": 2,
+        "avg_move_pct": 15.25,
+        "tickers": [
+          "AMC"
+        ],
+        "example_headline": "AMC Theatres Sees Revenue Rise, Shares Surge, As Hollywood Box Office Bounces Back - The Hollywood Reporter"
+      },
+      {
+        "word": "craters",
+        "lift": 5.73,
+        "occurrences": 2,
+        "avg_move_pct": 15.01,
+        "tickers": [
+          "IBM",
+          "ORCL"
+        ],
+        "example_headline": "IBM stock craters 25%, the worst day on record, after company issues second-quarter earnings warning - CNBC"
+      },
+      {
+        "word": "denied",
+        "lift": 5.45,
+        "occurrences": 2,
+        "avg_move_pct": 14.27,
+        "tickers": [
+          "JNJ",
+          "LCID"
+        ],
+        "example_headline": "Lucid Motors Denied the Bankruptcy Rumors, But That's Not Enough to Make LCID Stock a Buy - Barchart.com"
+      },
+      {
+        "word": "logs",
+        "lift": 5.25,
+        "occurrences": 2,
+        "avg_move_pct": 13.75,
+        "tickers": [
+          "IBM",
+          "WMT"
+        ],
+        "example_headline": "IBM stock logs worst day ever as shares plunge 25% on Q2 earnings warning - Business Insider"
+      },
+      {
+        "word": "financial's",
+        "lift": 5.21,
+        "occurrences": 2,
+        "avg_move_pct": 13.65,
+        "tickers": [
+          "GS",
           "IBM"
         ],
-        "example_headline": "MACOM, Lattice Semiconductor, and Amtech Shares Skyrocket, What You Need To Know"
+        "example_headline": "IBM's stock weakness is an opportunity to buy it, says KKM Financial's Jeff Kilburg - CNBC"
+      },
+      {
+        "word": "pace",
+        "lift": 5.1,
+        "occurrences": 2,
+        "avg_move_pct": 13.37,
+        "tickers": [
+          "GS",
+          "IBM"
+        ],
+        "example_headline": "IBM is on pace for its worst day ever - CNN"
+      },
+      {
+        "word": "faltered",
+        "lift": 5.09,
+        "occurrences": 2,
+        "avg_move_pct": 13.35,
+        "tickers": [
+          "IBM",
+          "UNH"
+        ],
+        "example_headline": "\u2018We faltered\u2019: IBM stock collapses after a grave warning about AI - Fast Company"
+      },
+      {
+        "word": "take-private",
+        "lift": 5.08,
+        "occurrences": 2,
+        "avg_move_pct": 13.32,
+        "tickers": [
+          "LCID"
+        ],
+        "example_headline": "Lucid Plunges 50% as Reports Claim EV Maker Is Weighing a Take-Private or Chapter 11 - Yahoo Finance"
       }
     ],
     "year": [
       {
-        "word": "plummet",
-        "lift": 7.87,
+        "word": "denies",
+        "lift": 8.71,
         "occurrences": 2,
-        "avg_move_pct": 20.83,
+        "avg_move_pct": 22.43,
         "tickers": [
-          "IBM",
           "LCID"
         ],
-        "example_headline": "Gartner and DXC Shares Plummet, What You Need To Know"
+        "example_headline": "Lucid Stock Rebounds After EV Maker Denies Bankruptcy Report: 'Completely False' - Benzinga"
       },
       {
-        "word": "tug-of-war",
-        "lift": 6.38,
-        "occurrences": 2,
-        "avg_move_pct": 16.88,
-        "tickers": [
-          "GS",
-          "IBM"
-        ],
-        "example_headline": "Big Banks Lift, IBM Drags, and the Dow Flatlines"
-      },
-      {
-        "word": "jumpstarting",
-        "lift": 6.38,
-        "occurrences": 2,
-        "avg_move_pct": 16.88,
-        "tickers": [
-          "GS",
-          "IBM"
-        ],
-        "example_headline": "Big Banks Lift, IBM Drags, and the Dow Flatlines"
-      },
-      {
-        "word": "flatlines",
-        "lift": 6.38,
-        "occurrences": 2,
-        "avg_move_pct": 16.88,
-        "tickers": [
-          "GS",
-          "IBM"
-        ],
-        "example_headline": "Big Banks Lift, IBM Drags, and the Dow Flatlines"
-      },
-      {
-        "word": "flatline",
-        "lift": 6.38,
-        "occurrences": 2,
-        "avg_move_pct": 16.88,
-        "tickers": [
-          "GS",
-          "IBM"
-        ],
-        "example_headline": "Big Banks Lift, IBM Drags, and the Dow Flatlines"
-      },
-      {
-        "word": "mlq",
-        "lift": 6.38,
-        "occurrences": 2,
-        "avg_move_pct": 16.88,
-        "tickers": [
-          "GS",
-          "IBM"
-        ],
-        "example_headline": "IBM Stock Plunges 25% After Rare Q2 Earnings Warning, Worst Day Since 1987 - MLQ.ai"
-      },
-      {
-        "word": "averages",
-        "lift": 6.12,
-        "occurrences": 2,
-        "avg_move_pct": 16.2,
-        "tickers": [
-          "IBM",
-          "RIVN"
-        ],
-        "example_headline": "IBM tumbles more than 20% as RSI signals oversold and multiple moving averages are broken - Seeking Alpha"
-      },
-      {
-        "word": "squeezing",
-        "lift": 5.59,
-        "occurrences": 2,
-        "avg_move_pct": 14.79,
-        "tickers": [
-          "IBM",
-          "MCD"
-        ],
-        "example_headline": "IBM warns AI boom squeezing software budgets; shares sink in sector rout - Yahoo Finance"
-      },
-      {
-        "word": "synthetic",
-        "lift": 5.47,
-        "occurrences": 2,
-        "avg_move_pct": 14.48,
-        "tickers": [
-          "IBM",
-          "XOM"
-        ],
-        "example_headline": "IBM is on pace for its worst day ever - CNN"
-      },
-      {
-        "word": "tanks",
-        "lift": 5.46,
-        "occurrences": 4,
-        "avg_move_pct": 14.45,
+        "word": "bounces",
+        "lift": 7.83,
+        "occurrences": 3,
+        "avg_move_pct": 20.15,
         "tickers": [
           "AMC",
-          "GS",
-          "IBM",
-          "JPM"
+          "KO",
+          "LCID"
         ],
-        "example_headline": "Stock Market Today: Nasdaq Leads The Day; Yum Brands Falls On Report Of Taco Bell Investigation (Live Coverage)"
+        "example_headline": "Lucid Stock Bounces Back After Strongly Refuting Bankruptcy Rumors - The Motley Fool"
       },
       {
-        "word": "knowledge",
-        "lift": 5.45,
-        "occurrences": 2,
-        "avg_move_pct": 14.42,
+        "word": "electrek",
+        "lift": 7.14,
+        "occurrences": 3,
+        "avg_move_pct": 18.38,
         "tickers": [
-          "IBM",
-          "NVDA"
+          "LCID",
+          "RIVN"
         ],
-        "example_headline": "IBM Shares Plunge as Software Deals Take Back Seat in AI Race - Data Center Knowledge"
+        "example_headline": "Saudi Prince Alwaleed takes 5% Lucid (LCID) stake, stock jumps 25% - Electrek"
       },
       {
-        "word": "graphics",
-        "lift": 5.45,
-        "occurrences": 2,
-        "avg_move_pct": 14.42,
+        "word": "axios",
+        "lift": 7.1,
+        "occurrences": 3,
+        "avg_move_pct": 18.27,
         "tickers": [
-          "IBM",
-          "NVDA"
+          "AMC",
+          "DIS",
+          "IBM"
         ],
-        "example_headline": "Nvidia (NVDA) Stock Trades Up, Here Is Why"
+        "example_headline": "\"The Odyssey\" delivers blockbuster results for AMC - Axios"
+      },
+      {
+        "word": "viewing",
+        "lift": 6.8,
+        "occurrences": 2,
+        "avg_move_pct": 17.5,
+        "tickers": [
+          "AMC",
+          "MSTR"
+        ],
+        "example_headline": "AMC Stock Soars on Q2 Results: CEO Says \u2018I Think We\u2019ve Won That Fight\u2019 Against At\u2011Home Viewing - Benzinga"
       },
       {
         "word": "guardian",
-        "lift": 5.38,
+        "lift": 6.33,
         "occurrences": 2,
-        "avg_move_pct": 14.22,
-        "tickers": [
-          "IBM",
-          "INTC"
-        ],
-        "example_headline": "IBM loses quarter of its value as tech giant\u2019s shares plunge and profits falter - The Guardian"
-      },
-      {
-        "word": "issuing",
-        "lift": 5.33,
-        "occurrences": 2,
-        "avg_move_pct": 14.1,
-        "tickers": [
-          "IBM",
-          "TSLA"
-        ],
-        "example_headline": "IBM stock craters 23% after issuing second-quarter earnings warning - CNBC"
-      },
-      {
-        "word": "crwd",
-        "lift": 5.24,
-        "occurrences": 2,
-        "avg_move_pct": 13.88,
-        "tickers": [
-          "CSCO",
-          "IBM"
-        ],
-        "example_headline": "CRWD, PANW, ZS, OKTA In Focus \u2014 Cybersecurity Stocks Get Boost As IBM CEO Flags Rising Concerns - Yahoo Finance"
-      },
-      {
-        "word": "caused",
-        "lift": 5.24,
-        "occurrences": 2,
-        "avg_move_pct": 13.87,
+        "avg_move_pct": 16.29,
         "tickers": [
           "IBM",
           "PLTR"
         ],
-        "example_headline": "The Detail in IBM\u2019s Earnings Warning That Caused The Stock\u2019s Worst Day Ever"
+        "example_headline": "IBM loses quarter of its value as tech giant\u2019s shares plunge and profits falter - The Guardian"
       },
       {
-        "word": "appeared",
-        "lift": 5.2,
+        "word": "rattling",
+        "lift": 6.31,
         "occurrences": 2,
-        "avg_move_pct": 13.76,
+        "avg_move_pct": 16.23,
         "tickers": [
-          "CRM",
-          "IBM"
+          "IBM",
+          "INTC"
         ],
-        "example_headline": "MACOM, Lattice Semiconductor, and Amtech Shares Skyrocket, What You Need To Know"
+        "example_headline": "IBM Tumbles 22% Toward Its Worst Day Since 1987, Rattling Software Stocks - 24/7 Wall St."
       },
       {
-        "word": "agilysys",
-        "lift": 5.2,
+        "word": "hollywood",
+        "lift": 5.92,
         "occurrences": 2,
-        "avg_move_pct": 13.76,
+        "avg_move_pct": 15.25,
         "tickers": [
-          "CRM",
+          "AMC"
+        ],
+        "example_headline": "AMC Theatres Sees Revenue Rise, Shares Surge, As Hollywood Box Office Bounces Back - The Hollywood Reporter"
+      },
+      {
+        "word": "craters",
+        "lift": 5.83,
+        "occurrences": 2,
+        "avg_move_pct": 15.01,
+        "tickers": [
+          "IBM",
+          "ORCL"
+        ],
+        "example_headline": "IBM stock craters 25%, the worst day on record, after company issues second-quarter earnings warning - CNBC"
+      },
+      {
+        "word": "denied",
+        "lift": 5.55,
+        "occurrences": 2,
+        "avg_move_pct": 14.27,
+        "tickers": [
+          "JNJ",
+          "LCID"
+        ],
+        "example_headline": "Lucid Motors Denied the Bankruptcy Rumors, But That's Not Enough to Make LCID Stock a Buy - Barchart.com"
+      },
+      {
+        "word": "registered",
+        "lift": 5.43,
+        "occurrences": 2,
+        "avg_move_pct": 13.96,
+        "tickers": [
+          "AMC"
+        ],
+        "example_headline": "AMC Entertainment Holdings, Inc. Announces Pricing of $200 Million Registered Direct Offering of Common Stock - AMC Entertainment Holdings, Inc."
+      },
+      {
+        "word": "logs",
+        "lift": 5.34,
+        "occurrences": 2,
+        "avg_move_pct": 13.75,
+        "tickers": [
+          "IBM",
+          "WMT"
+        ],
+        "example_headline": "IBM stock logs worst day ever as shares plunge 25% on Q2 earnings warning - Business Insider"
+      },
+      {
+        "word": "financial's",
+        "lift": 5.3,
+        "occurrences": 2,
+        "avg_move_pct": 13.65,
+        "tickers": [
+          "GS",
           "IBM"
         ],
-        "example_headline": "Atlassian, monday.com, and Agilysys Stocks Trade Down, What You Need To Know"
+        "example_headline": "IBM's stock weakness is an opportunity to buy it, says KKM Financial's Jeff Kilburg - CNBC"
+      },
+      {
+        "word": "rumors",
+        "lift": 5.21,
+        "occurrences": 6,
+        "avg_move_pct": 13.4,
+        "tickers": [
+          "COST",
+          "LCID"
+        ],
+        "example_headline": "Lucid (LCID) Denies Bankruptcy Rumors While Reshaping Leadership And Operations - Yahoo Finance"
+      },
+      {
+        "word": "pace",
+        "lift": 5.2,
+        "occurrences": 2,
+        "avg_move_pct": 13.37,
+        "tickers": [
+          "GS",
+          "IBM"
+        ],
+        "example_headline": "IBM is on pace for its worst day ever - CNN"
+      },
+      {
+        "word": "faltered",
+        "lift": 5.19,
+        "occurrences": 2,
+        "avg_move_pct": 13.35,
+        "tickers": [
+          "IBM",
+          "UNH"
+        ],
+        "example_headline": "\u2018We faltered\u2019: IBM stock collapses after a grave warning about AI - Fast Company"
+      },
+      {
+        "word": "take-private",
+        "lift": 5.17,
+        "occurrences": 2,
+        "avg_move_pct": 13.32,
+        "tickers": [
+          "LCID"
+        ],
+        "example_headline": "Lucid Plunges 50% as Reports Claim EV Maker Is Weighing a Take-Private or Chapter 11 - Yahoo Finance"
+      },
+      {
+        "word": "theatres",
+        "lift": 5.11,
+        "occurrences": 5,
+        "avg_move_pct": 13.15,
+        "tickers": [
+          "AMC"
+        ],
+        "example_headline": "AMC Theatres Sees Revenue Rise, Shares Surge, As Hollywood Box Office Bounces Back - The Hollywood Reporter"
       }
     ]
   }

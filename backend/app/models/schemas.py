@@ -11,6 +11,16 @@ class Verdict(BaseModel):
     n_news_days: int
     n_quiet_days: int
     top_moves_explained_pct: float | None
+    # Directional bias — which way news-day moves lean. News Beta measures the
+    # size of news-day moves; these describe their sign.
+    direction_label: str | None = None
+    direction_explanation: str | None = None
+    news_day_up_share: float | None = None
+    n_news_up_days: int = 0
+    n_news_down_days: int = 0
+    news_day_avg_signed_pct: float | None = None
+    avg_up_move_pct: float | None = None
+    avg_down_move_pct: float | None = None
 
 
 class PricePoint(BaseModel):

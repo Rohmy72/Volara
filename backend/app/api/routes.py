@@ -31,13 +31,26 @@ def health():
 
 @router.get("/leaderboard")
 def get_leaderboard():
-    """Precomputed leaderboards: stocks ranked by News Reaction Ratio (with
-    sector tags for client-side filtering) and trending buzzwords bucketed into
-    week / month / year windows. Served from a snapshot on disk."""
+    """Leaderboards: stocks ranked by News Reaction Ratio (with sector tags for
+    client-side filtering and per-stock movement vs the previous snapshot) and
+    trending buzzwords bucketed into week / month / year windows.
+
+    Served from a snapshot on disk that refreshes itself: a stale snapshot is
+    returned immediately while a background rebuild runs (stale-while-revalidate).
+    """
     try:
-        return leaderboard.load_snapshot()
+        snapshot = leaderboard.load_snapshot()
     except LeaderboardUnavailable as e:
         raise HTTPException(status_code=503, detail=str(e))
+
+    leaderboard.maybe_refresh(snapshot)
+
+    # Surface freshness to the client without mutating the cached dict.
+    return {
+        **snapshot,
+        "age_hours": leaderboard.snapshot_age_hours(snapshot),
+        "refreshing": leaderboard.is_refreshing(),
+    }
 
 
 @router.get("/analyze/{ticker}", response_model=AnalysisResponse)
@@ -138,6 +151,14 @@ def analyze(
             n_news_days=result.n_news_days,
             n_quiet_days=result.n_quiet_days,
             top_moves_explained_pct=result.top_moves_explained_pct,
+            direction_label=result.direction_label,
+            direction_explanation=result.direction_explanation,
+            news_day_up_share=result.news_day_up_share,
+            n_news_up_days=result.n_news_up_days,
+            n_news_down_days=result.n_news_down_days,
+            news_day_avg_signed_pct=result.news_day_avg_signed_pct,
+            avg_up_move_pct=result.avg_up_move_pct,
+            avg_down_move_pct=result.avg_down_move_pct,
         ),
         price_series=price_series,
         buzzwords=[BuzzwordOut(**vars(b)) for b in buzzwords],

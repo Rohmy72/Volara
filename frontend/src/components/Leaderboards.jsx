@@ -3,6 +3,20 @@ import StockLeaderboard from "./StockLeaderboard.jsx";
 import BuzzwordLeaderboard from "./BuzzwordLeaderboard.jsx";
 import { fetchLeaderboard } from "../api.js";
 
+// Human-readable freshness from the snapshot's age (falls back to the raw date
+// for snapshots served without an age_hours field).
+function freshnessLabel(data) {
+  const age = data.age_hours;
+  if (typeof age !== "number") {
+    return `Updated ${new Date(data.generated_at).toLocaleDateString()}`;
+  }
+  if (age < 1) return "Updated just now";
+  if (age < 2) return "Updated 1h ago";
+  if (age < 24) return `Updated ${Math.round(age)}h ago`;
+  const days = Math.round(age / 24);
+  return `Updated ${days}d ago`;
+}
+
 export default function Leaderboards({ onSelectTicker }) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
@@ -48,8 +62,8 @@ export default function Leaderboards({ onSelectTicker }) {
       />
       <BuzzwordLeaderboard buzzwords={data.buzzwords} />
       <p className="lb-timestamp muted">
-        Snapshot: {new Date(data.generated_at).toLocaleDateString()} · {data.n_ranked}{" "}
-        stocks
+        {freshnessLabel(data)} · {data.n_ranked} stocks
+        {data.refreshing && <span className="lb-refreshing"> · refreshing…</span>}
       </p>
     </aside>
   );
