@@ -22,6 +22,18 @@ class Settings:
 
     cache_ttl_seconds: int = int(os.environ.get("CACHE_TTL_SECONDS", "1800"))
 
+    # Leaderboard stale-while-revalidate: when a request finds the snapshot
+    # older than this, it serves the current one and triggers an in-process
+    # rebuild so the board keeps changing as the betas change — no separate
+    # scheduled service required. Set LEADERBOARD_AUTO_REFRESH=0 to disable
+    # (e.g. if you'd rather refresh out-of-band via cron).
+    leaderboard_max_age_hours: float = float(
+        os.environ.get("LEADERBOARD_MAX_AGE_HOURS", "12")
+    )
+    leaderboard_auto_refresh: bool = (
+        os.environ.get("LEADERBOARD_AUTO_REFRESH", "1") not in ("0", "false", "False")
+    )
+
     cors_origins: list[str] = os.environ.get(
         "CORS_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173"
     ).split(",")

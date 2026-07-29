@@ -25,6 +25,14 @@ NEWS_DRIVEN_THRESHOLD = 2.0
 SOMEWHAT_SENSITIVE_THRESHOLD = 1.2
 
 
+# A news day is only counted as directional if its abnormal move clears this
+# threshold (in return terms); flat days near zero shouldn't tilt the skew.
+DIRECTION_MIN_ABS_MOVE = 0.001  # 0.1%
+# Up-share cutoffs for the directional label.
+UPSIDE_SHARE = 0.60
+DOWNSIDE_SHARE = 0.40
+
+
 @dataclass
 class NewsBetaResult:
     status: str  # "ok" | "insufficient_data"
@@ -37,6 +45,16 @@ class NewsBetaResult:
     verdict_label: str
     verdict_explanation: str
     abnormal_returns: pd.Series
+    # Directional bias: which way news-day moves lean, from the *signed*
+    # abnormal returns (News Beta itself only looks at magnitude).
+    direction_label: str | None = None
+    direction_explanation: str | None = None
+    news_day_up_share: float | None = None
+    n_news_up_days: int = 0
+    n_news_down_days: int = 0
+    news_day_avg_signed_pct: float | None = None
+    avg_up_move_pct: float | None = None
+    avg_down_move_pct: float | None = None
     news_day_map: dict[pd.Timestamp, list[NewsItem]] = field(default_factory=dict)
 
 
@@ -122,6 +140,84 @@ def top_moves_explained_pct(
     return round(100 * hits / top_n, 1)
 
 
+def compute_directional_bias(
+    abnormal: pd.Series, news_days: set[pd.Timestamp]
+) -> dict:
+    """From the *signed* abnormal returns on news days, work out which way the
+    stock's news reactions lean. News Beta measures how big news-day moves are;
+    this measures whether they're gains or losses.
+
+    Returns a dict of directional fields (label/explanation + the counts and
+    averages behind them). All values are None/0 when there aren't enough
+    directional news days to say anything.
+    """
+    empty = {
+        "direction_label": None,
+        "direction_explanation": None,
+        "news_day_up_share": None,
+        "n_news_up_days": 0,
+        "n_news_down_days": 0,
+        "news_day_avg_signed_pct": None,
+        "avg_up_move_pct": None,
+        "avg_down_move_pct": None,
+    }
+    if abnormal.empty or not news_days:
+        return empty
+
+    news_abn = abnormal[abnormal.index.isin(news_days)].dropna()
+    directional = news_abn[news_abn.abs() >= DIRECTION_MIN_ABS_MOVE]
+    ups = directional[directional > 0]
+    downs = directional[directional < 0]
+    n_up, n_down = int(len(ups)), int(len(downs))
+    total = n_up + n_down
+    if total == 0:
+        return empty
+
+    up_share = n_up / total
+    avg_signed_pct = round(float(news_abn.mean()) * 100, 2)
+    avg_up_pct = round(float(ups.mean()) * 100, 2) if n_up else None
+    avg_down_pct = round(float(downs.mean()) * 100, 2) if n_down else None
+
+    if up_share >= UPSIDE_SHARE:
+        label = "Upside-skewed"
+        lean = f"rose on {n_up} of {total} news days"
+    elif up_share <= DOWNSIDE_SHARE:
+        label = "Downside-skewed"
+        lean = f"fell on {n_down} of {total} news days"
+    else:
+        label = "Two-sided"
+        lean = f"split roughly evenly ({n_up} up, {n_down} down)"
+
+    explanation = (
+        f"After stripping out the market, this stock {lean} — the average "
+        f"news-day move was {avg_signed_pct:+.2f}%."
+    )
+    # Note any asymmetry in reaction size (e.g. bad news hits harder).
+    if avg_up_pct is not None and avg_down_pct is not None:
+        up_mag, down_mag = avg_up_pct, abs(avg_down_pct)
+        if down_mag >= up_mag * 1.5:
+            explanation += (
+                f" Down reactions are larger on average ({avg_down_pct:.2f}%) "
+                f"than up ones (+{up_mag:.2f}%)."
+            )
+        elif up_mag >= down_mag * 1.5:
+            explanation += (
+                f" Up reactions are larger on average (+{up_mag:.2f}%) than "
+                f"down ones ({avg_down_pct:.2f}%)."
+            )
+
+    return {
+        "direction_label": label,
+        "direction_explanation": explanation,
+        "news_day_up_share": round(up_share, 3),
+        "n_news_up_days": n_up,
+        "n_news_down_days": n_down,
+        "news_day_avg_signed_pct": avg_signed_pct,
+        "avg_up_move_pct": avg_up_pct,
+        "avg_down_move_pct": avg_down_pct,
+    }
+
+
 def run_news_beta_analysis(
     returns: pd.DataFrame,
     news_items: list[NewsItem],
@@ -171,4 +267,5 @@ def run_news_beta_analysis(
         verdict_explanation=explanation,
         abnormal_returns=abnormal,
         news_day_map=news_day_map,
+        **compute_directional_bias(abnormal, news_days),
     )
